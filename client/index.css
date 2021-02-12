@@ -1,0 +1,210 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+  height: 400px;
+}
+
+/* Full-width textarea */
+.form-container input {
+  width: 220px;
+  padding: 15px;
+  margin: 5px 0 22px 1px;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 20px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container input:focus {
+  background-color: #ddd;
+  outline: none;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 8px;
+  height: 60px;
+  /* width: 35%; */
+}
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  resize: none;
+  margin: 5px 0 22px 1px;
+  opacity: 0.8;
+  min-height: 20px;
+  border: none;
+  display: inline-block;
+}
+.input{
+  border: none;
+  border-radius: 0;
+  padding:5%;
+  width:80%;
+  font-size:1.2em;
+}
+
+/* Add a red background color to the cancel button */
+.cancel {
+  color: red;
+  right: 15px;
+  size: 8px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+.form-container span{
+  display: flex;
+}
+.form-grid{
+  display: flex;
+  bottom: 0;
+  position: fixed;
+  
+}
+.form-grid .btn{
+  height: 40px;
+}
+.form-grid input{
+  height: 40px;
+}
+
+@media only screen and (max-width:768px){
+  .MuiGrid-root{
+    display:block
+  }
+  .grids,
+  .cloud .grids{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .gridList{
+    grid-template-columns: 1fr;
+    grid-template-rows:1fr;
+  }
+
+}
+.footer-container{
+  max-width: 1100px;
+  margin:0 auto;
+  overflow: auto;
+  padding: 0 40px;
+}
+.footer .social a{
+  margin: 0 10px;
+}
+.btn-dark, .bg-dark{
+  background-color: #17293d;
+  color: #acd523;
+
+}
+.btn-light, .bg-light{
+  background-color: #f4f4f4;
+  color: #333;
+
+}
+.btn-primary a, .bg-primary a,
+.btn-secondary a, .bg-secondary a,
+.btn-dark a, .bg-dark a{
+  color:#fff
+}
+.grids{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height:100%;
+
+}
+.grid-3{
+  grid-template-columns: repeat(3, 1fr);
+}
+.py-5{
+  padding:4rem 0;
+}
+.my-2{
+  margin:1.5rem 0;
+}
+.py-2{
+  padding:1.5rem 0;
+}
+.cloud .grids{
+  grid-template-columns: repeat(4);
+}
+.alert{
+  background-color: #5cb85c;
+  padding:10px 20px;
+  font-weight: bold;
+  margin:15px 0;
+}
+.alert-success{
+  background-color: #daf0da;
+  color: #000f30;
+}
+.btn{
+  display: inline-block;
+  padding:10px 30px;
+  cursor: pointer;
+  background-color: #1c3fa8;
+  color:#fff;
+  border:none;
+  border-radius: 5px;
+}
+.btn-dark a{
+  color: #fff;
+}

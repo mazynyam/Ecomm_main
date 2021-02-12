@@ -1,0 +1,55 @@
+.rfq-quotation{
+    margin-top:30px;
+}
+
+.title-info{
+    display: flex;
+    align-items: center;
+}
+
+.rfq-quotation .rfq-banner .rfq-content .rfq-banner .banner-number .item-total {
+    display: block;
+    color: #fff;
+    margin-right: 20px;
+    -ms-flex: 1 1;
+    flex: 1 1;
+    padding: 40px;
+    min-width: 420px;
+    margin-top:40px;
+    width: 50%;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 24px;
+    color: #fff;
+    line-height: 24px;
+}
+.rfq-quotation .rfq-content .rfq-banner .banner-link {
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    border-radius: 19px;
+    font-size: 16px;
+    color: #fff;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 1100px){
+.rfq-quotation .rfq-content .rfq-form {
+    width: 100%;
+}
+}
+.rfq-quotation .rfq-content .rfq-form .form-body {
+    background: #fff;
+    height: 303px;
+    padding: 30px;
+    border: 6px solid #dcdee3;
+}
+.rfq-quotation .rfq-content .rfq-form .form-body .rfq-list {
+    margin: 25px 0;
+    position: relative;
+    height: 30px;
+    overflow: hidden;
+}
+.rfq-quotation .rfq-content .rfq-form .form-body .form-item {
+    margin-bottom: 20px;
+}
