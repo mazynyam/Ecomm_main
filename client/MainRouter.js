@@ -4,7 +4,7 @@
   Switch
 } from 'react-router-dom'
 import Home from  './core/Home'
-// import Menu from  './core/Menu'
+import Menu from  './core/Menu'
 import Users from   './user/Users'
 // import Admin  from './admin/Admin'
 // import Dashboard  from './admin/Dashboard'
@@ -20,14 +20,14 @@ import MyShops from  './shop/MyShops'
 import Shop  from './shop/Shop'
 import EditShop from  './shop/EditShop'
 import NewProduct from  './product/NewProduct'
-import ListProducts from  './product/Products'
+// import ListProducts from  './product/Products'
 import EditProduct from  './product/EditProduct'
 import Product from  './product/Product'
 import Inquiry from  './cart/Inquiry'
 import StripeConnect  from './user/StripeConnect'
 import ShopOrders from  './order/ShopOrders'
 import Order from  './order/Order'
-// import PlaceARequestForm from  './request/PlaceARequestForm'
+import PlaceARequestForm from  './request/PlaceARequestForm'
 import VerifyEmail from  './components/VerifyEmail'
 // import Login from  './admin/Login'
 // import UsersList from './admin/Users/UsersList'
@@ -79,4 +79,4 @@ import VerifyEmail from  './components/VerifyEmail'
        
   )
 }
-export default MainRouter
+export default MainRouter;

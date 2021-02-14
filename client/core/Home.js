@@ -99,7 +99,7 @@ export default function Home(){
         onExiting={()=> setAnimating(true)}
         onExited={()=> setAnimating(false)}
         key={item.id} >
-        <img src={item.imgUrl} alt={item.title } height='300px' width='900px' />
+        <img src={item.imgUrl} alt={item.title } id="imgslide" />
         <CarouselCaption captionText={item.title} captionHeader={item.button} />
       </CarouselItem>
     )
@@ -127,7 +127,7 @@ export default function Home(){
                 <h6 id="payment"><span className="fa fa-credit-card fa-lg" id="paynt"></span>Secure Payment</h6>
                 </Grid>
               
-                <Grid item xs={12} sm={12}  md={6} lg={8} xl={6}>
+                <Grid item xs={12} sm={12}  md={7} lg={7} xl={7} >
                   <Carousel 
                   activeIndex={activeIndex}
                   next={next}
@@ -140,7 +140,7 @@ export default function Home(){
                 </Carousel>
               
               </Grid>
-                  <Grid  item xs={12} sm={12}  md={6} lg={4} xl={4}>
+                  <Grid  item xs={12} sm={12}  md={5} lg={5} xl={5}>
                     <Suggestions  products={suggestions} title={suggestionTitle}/>
                   </Grid>
                   

@@ -13,13 +13,10 @@ const useStyles = makeStyles(theme => ({
     height: '28px',
     color:'#ACD523'
   },
-inquire: {
-  
-    color:'#ACD523',
- 
-   
-    
-  },
+// inquire: {
+// color:'#ACD523',
+//     display:"block",
+//  },
   disabledIconButton: {
     color: '#7f7563',
     width: '28px',
@@ -46,7 +43,7 @@ export default function AddToCart(props) {
     }
     return (<span>
       {props.item.quantity >= 0 ?
-        <IconButton className={classes.inquire}  onClick={makeInquiry}>
+        <IconButton id="inquire"  onClick={makeInquiry}>
          
           <Typography id="myinquire"> Contact Supplier</Typography>
          </IconButton> :

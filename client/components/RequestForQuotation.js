@@ -4,7 +4,7 @@ import React from 'react'
 import { fade, makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button'
 import { Grid, Typography } from '@material-ui/core'
-
+import logoquote from './../assets/images/logoquote.jpg';
 
 
 
@@ -32,13 +32,15 @@ quote: {
 },
 specservice: {
     fontSize:"15px",
+
    
 },
 quoteservice: {
     backgroundColor:"#17293d",
     color:"#fff",
     height:"80px",
-    margin:"auto"
+    margin:"auto",
+    
 
    
     
@@ -51,8 +53,10 @@ function RequestForQuotation() {
         <div  className="rfq-quotation" data-spm="rfq">
             <div className="rfq-content">
             <div className="title-info">
+            <img src={logoquote} alt="Logo" width="198px" height="190px" id="logq"/>
            
-                <h2>PLACE A REQUEST</h2>
+                <h3 id="prq">PLACE A REQUEST</h3>
+               
                 {/* <span className='alert alert-sucess'>Special Service</span>  */}
                 <Button className={classes.quoteservice} >
                 <span className={classes.specservice}>Special Service</span> 
@@ -71,8 +75,8 @@ function RequestForQuotation() {
                             </Grid>
                         </div>
                         {/* <Button id="butcolor"><a  href='/place-request/get-started' >Request Quotation</a></Button> */}
-                        <Button className={classes.quotebtn} >
-                                <a href='/place-request/get-started'><span className={classes.quote}>Request Quotation</span></a>
+                        <Button className={classes.quotebtn}>
+                        <a href='/place-request/get-started'><span className={classes.quote}>Request Quotation</span></a>
                             </Button>
                     </div>
                 </section>
@@ -83,4 +87,4 @@ function RequestForQuotation() {
     )
 }
 
-export default RequestForQuotation
+export default RequestForQuotation;

@@ -42,10 +42,10 @@ const useStyles = makeStyles(theme => ({
   viewButton: {
     verticalAlign: 'middle'
   },
-  card: {
-    width: '100%',
-    display: 'inline-flex'
-  },
+  // card: {
+  //   width: '100%',
+  //   display: 'inline-flex'
+  // },
   details: {
     display: 'inline-block',
     width: "100%"
@@ -54,11 +54,11 @@ const useStyles = makeStyles(theme => ({
     flex: '1 0 auto',
     padding: '16px 8px 0px'
   },
-  cover: {
-    width: '65%',
-    height: 130,
-    margin: '8px'
-  },
+  // cover: {
+  //   width: '65%',
+  //   height: 130,
+  //   margin: '8px'
+  // },
   controls: {
     marginTop: '8px'
   },
@@ -107,12 +107,13 @@ export default function Suggestions (props) {
         </Typography>
         {props.products.map((item, i) => {
             return <span key={i}>
-              <Card className={classes.card}>
+               <Card id="sugcard">
                 <CardMedia
-                  className={classes.cover}
+                  id="icover"
                   image={'/api/product/image/'+item._id}
                   title={item.name}
                 />
+              
                 <div className={classes.details}>
                   <CardContent className={classes.content}>
                     <Link to={'/product/'+item._id}><Typography variant="h3" component="h3" className={classes.productTitle} color="primary">{item.name}</Typography></Link>

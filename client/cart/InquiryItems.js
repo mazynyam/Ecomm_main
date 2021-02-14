@@ -45,21 +45,21 @@ const useStyles = makeStyles(theme => ({
     fontSize: '1.15em',
     marginBottom: '5px'
   },
-  subheading: {
-    color: 'rgba(88, 114, 128, 0.67)',
-    padding: '8px 10px 0',
-    cursor: 'pointer',
-    display: 'inline-block'
-  },
+  // subheading: {
+  //   color: 'rgba(88, 114, 128, 0.67)',
+  //   padding: '8px 10px 0',
+  //   cursor: 'pointer',
+  //   display: 'inline-block'
+  // },
   cart: {
     width: '100%',
     display: 'inline-flex'
   },
-  details: {
-    display: 'inline-block',
-    width: "100%",
-    padding: "4px"
-  },
+  // details: {
+  //   display: 'inline-block',
+  //   width: "100%",
+  //   padding: "4px"
+  // },
   content: {
     flex: '1 0 auto',
     padding: '16px 8px 0px'
@@ -196,7 +196,7 @@ export default function InquiryItems (props) {
                 image={'/api/product/image/'+item.product._id}
                 title={item.product.name}
               />
-              <div className={classes.details}>
+              <div id="details">
                 <CardContent className={classes.content}>
                   <Link to={'/product/'+item.product._id}><Typography type="title" component="h3" className={classes.productTitle} color="primary">{item.product.name}</Typography></Link>
                   <div>
@@ -205,7 +205,7 @@ export default function InquiryItems (props) {
                     <span className={classes.itemShop}>Shop: {item.product.shop.business_name}</span>
                   </div>
                 </CardContent>
-                <div className={classes.subheading}>
+                <div id="mysubheading">
                   Quantity: <TextField
                               value={item.quantity}
                               onChange={handleChange(i)}

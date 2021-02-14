@@ -1,10 +1,11 @@
-import React, {useState, useEffect} from 'react'
-import { Card, CardContent,Grid, TextField, makeStyles, fade, CardActions,Button } from '@material-ui/core'
+import React, {useState,} from 'react'
+import { Card, Grid, TextField, makeStyles, fade,Button } from '@material-ui/core'
 import Typography from '@material-ui/core/Typography'
 import FileUpload from '@material-ui/icons/AddPhotoAlternate'
 import { Box } from '@material-ui/core';
 import create from './api-request'
 import { MenuItem } from '@material-ui/core';
+
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -15,14 +16,6 @@ const useStyles = makeStyles(theme => ({
 },
 menu: {
   width: 200,
-},
-sellproduct: {
-    fontSize: 40,
-    marginLeft: 30,
-    color: "#213A57",
-    fontFamily: "Bitter",
-    fontWeight: "bold"
-
 },
 
 textField2: {
@@ -53,30 +46,22 @@ buttonfield: {
     marginRight: theme.spacing(5),
 },
 fieldbutt: {
-
-    marginLeft: theme.spacing(15),
-
-
-},
+marginLeft: theme.spacing(15),
+  },
+  picnt: {
+  backgroundColor:'#acd523',
+      },
 textField3: {
     marginLeft: theme.spacing(5),
     marginRight: theme.spacing(5),
     width: 200,
-    // // maxWidth: 600,
-    //   margin: 'auto',
-    //  textAlign: 'center',
-
-    
     paddingBottom: theme.spacing(2)
 },
 textField1: {
     marginLeft: theme.spacing(0),
     marginRight: theme.spacing(0),
     width: 200,
-    // // maxWidth: 600,
-    //   margin: 'auto',
-    textAlign: 'center',
-    
+   textAlign: 'center',
     paddingBottom: theme.spacing(2)
 },
 
@@ -118,10 +103,10 @@ boxfield2: {
 },
 
   card: {
-      maxWidth: 600,
+      maxWidth: 350,
       margin: 'auto',
       textAlign: 'center',
-      marginTop: theme.spacing(5),
+      marginTop: theme.spacing(2),
       paddingBottom: theme.spacing(2)
     },
     container: {
@@ -208,10 +193,10 @@ export default function PlaceARequestForm() {
     }
     return (
         <div>
-          <Grid container spacing={2}>
-            <Grid item xs={9} sm={9}>
+          <Grid container spacing={0}>
+            <Grid item xs={12} sm={12} md={7} lg={7} xl={7}>
             <Box borderBottom={1} className={classes.boxfield}>
-                <Typography type='headline' className={classes.sellproduct} component='h2'>Request For Quotation</Typography>
+                <Typography type='headline' id="sellproducts" component='h2'>Request For Quotation</Typography>
               </Box>
               <Card className={classes.card}>
           
@@ -258,7 +243,7 @@ export default function PlaceARequestForm() {
                   <TextField className={classes.textField} type="text" id="customization" name="customization" label='Product Customization' placeholder='You can add product customization here if any'   multiline rows={9} variant="outlined" onChange={handleChange('customization')}/><br /> <br />
                     <input accept="image/*" onChange={handleChange('image')} value={values.image ? values.image.name : ''} className={classes.input} id="icon-button-file" type="file"/><br /><br />
                     <label htmlFor="icon-button-file" onChange={handleChange('image')}>
-                        <Button variant="contained" color="secondary" component="span">
+                        <Button variant="contained" className={classes.picnt} component="span">
                           Add Pictures for actual items 
                         <FileUpload/>
                         </Button>
@@ -268,7 +253,7 @@ export default function PlaceARequestForm() {
               </Card>
            
             </Grid>
-            <Grid item xs={3} sm={9}>
+            <Grid item xs={12} sm={12} md={5} lg={5} xl={5}>
               <Card className={classes.card}>
               <Typography  color='textPrimary' component='h2'>This a  Special Feature</Typography>
               <Typography component='h3' className={classes.title}>Kiriikou.com takes this special request directly from their cherished users to source for products not featured on the site. </Typography>

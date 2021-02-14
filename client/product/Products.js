@@ -36,39 +36,11 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
   
   },
-  tile: {
-    textAlign: 'center'
-  },
+  
   image: {
     height: '80%',
     
   },
-  // tileBar: {
-  //   // backgroundColor: 'rgba(0, 0, 0, 0.72)',
-  //   backgroundColor: '#17293d',
-  //   height:"48px",
-  //   textAlign: 'left',
-  //   marginTop:"40px",
-    
-  // },
-  // tileTitle: {
-  //   fontSize:'0.9em',
-  //   marginBottom:'5px',
-  //   // color:'rgb(189, 222, 219)',
-  //   color:'#fff',
-  //   // display:'block',
-   
-  // },
-  
-  // priceTitle: {
-  //   fontSize:'0.9em',
-  //   textDecoration:'none',
-  //   color:'#fff',
-  //   display:'block',
-    
-    
-    
-  // },
   
 }))
 
@@ -90,13 +62,13 @@ function Products(props){
         (<div className={classes.container}>
           <GridList cellHeight={200} className={classes.gridList} cols={getGridListCols()}>
           {props.products.map((product, i) => (
-            <GridListTile key={i} className={classes.tile}>
+            <GridListTile key={i} id="imtile">
               <Link to={"/product/"+product._id}><img className={classes.image} src={'/api/product/image/'+product._id} alt={product.name} /></Link>
               <GridListTileBar id="mytilebar"
                 title={<Link to={"/product/"+product._id} id="tileTitle">{product.name}</Link>}
                 subtitle={<span id="priceTitle">$ {product.price}</span>}
-                actionIcon={
-                  <AddToInquiry  item= {product}/>
+                actionIcon={<span id="inqpr">{
+                  <AddToInquiry item= {product} />}</span>
                 }
               />
             </GridListTile>
