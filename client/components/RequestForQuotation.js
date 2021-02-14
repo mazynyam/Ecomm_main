@@ -53,7 +53,7 @@ function RequestForQuotation() {
         <div  className="rfq-quotation" data-spm="rfq">
             <div className="rfq-content">
             <div className="title-info">
-            <img src={logoquote} alt="Logo" width="198px" height="190px" id="logq"/>
+            <img src={logoquote} alt="Logo" width="205px" height="190px" id="logq"/>
            
                 <h3 id="prq">PLACE A REQUEST</h3>
                
