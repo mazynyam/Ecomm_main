@@ -15,6 +15,7 @@ import DialogContentText from '@material-ui/core/DialogContentText'
 import DialogTitle from '@material-ui/core/DialogTitle'
 import {Link} from 'react-router-dom'
 import crypto from 'crypto'
+import { fade} from '@material-ui/core/styles';
 
 
 
@@ -31,7 +32,10 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     marginTop: theme.spacing(2),
-    color: theme.palette.openTitle
+   
+    color:"#ACD523",
+    fontFamily:"Arial Black",
+    fontSize:"30px",
   },
   textField: {
     marginLeft: theme.spacing(1),
@@ -39,9 +43,15 @@ const useStyles = makeStyles(theme => ({
     width: 300
   },
   submit: {
+  
     margin: 'auto',
-    marginBottom: theme.spacing(2)
+    marginBottom: theme.spacing(2),
+    backgroundColor:"#ACD523",
+    '&:hover': {
+      color: fade('#fff', 0.8),
+      backgroundColor: fade('#acd523', 0.6),
   }
+}
 }))
 
 export default function Signup() {

@@ -2,6 +2,9 @@
 height:400px;
  width:700px;
 }
+#inqitem{
+  display:flex;
+}
 #logq{
    margin-left: -74px; 
    float: left;
@@ -335,7 +338,6 @@ a:hover{
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  /* padding: 8px 0px 8px 16px ; */
   list-style: none;
   height: 60px;
 }
@@ -638,6 +640,9 @@ body{
     margin-right: 20px;
     color: #acd523;
  
+}
+#inqitem{
+  display:block;
 }
 #plist{
   display: block;
@@ -1014,6 +1019,9 @@ body{
   
 }
 @media only screen and (min-width:281px) and (max-width: 300px)  {
+  #inqitem{
+    display:block;
+  }
   #imgslide{
     height:130px;
      width:200px;
@@ -1078,6 +1086,9 @@ body{
 }
 }
 @media only screen and (min-width:301px) and (max-width: 374px)  {
+  #inqitem{
+    display:block;
+  }
   #imgslide{
     height:180px;
      width:300px;
@@ -1172,6 +1183,9 @@ body{
   }
   }
   @media only screen and (min-width:375px) and (max-width: 400px)  {
+    #inqitem{
+      display:block;
+    }
     #imgslide{
       height:180px;
        width:300px;
@@ -1264,6 +1278,9 @@ body{
     }
     }
 @media only screen and (min-width:401px) and (max-width: 530px)  {
+  #inqitem{
+    display:block;
+  }
   #imgslide{
     height:250px;
      width:350px;
@@ -1355,6 +1372,9 @@ body{
   }
   }
   @media only screen and (min-width:535px) and (max-width: 740px)  {
+    #inqitem{
+      display:block;
+    }
     #imgslide{
       height:350px;
        width:450px;
@@ -1426,6 +1446,9 @@ body{
       }
     }
 @media only screen and (min-width:766px) and (max-width:800px)  {
+  #inqitem{
+    display:block;
+  }
 
 #tileTitle {
   font-size:11px;
@@ -1492,6 +1515,9 @@ display:block;
   }
 }
 @media only screen and (min-width:801px) and (max-width: 1200px)  {
+  #inqitem{
+    display:block;
+  }
   #icbtn{
     margin-right: -45px;
   }

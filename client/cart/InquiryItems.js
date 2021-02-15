@@ -191,6 +191,7 @@ export default function InquiryItems (props) {
       {enquiryItems.length>0 ? (<span>
           {enquiryItems.map((item, i) => {
             return <span key={i}><Card className={classes.cart}>
+              <div id="inqitem">
               <CardMedia
                 className={classes.cover}
                 image={'/api/product/image/'+item.product._id}
@@ -221,7 +222,9 @@ export default function InquiryItems (props) {
                             <Button className={classes.removeButton} color="primary" onClick={removeItem(i)}>x Remove</Button>
                 </div>
               </div>
+              </div>
             </Card>
+            
             <Divider/>
           </span>})
         }
