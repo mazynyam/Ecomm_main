@@ -4,6 +4,7 @@ import CartIcon from '@material-ui/icons/ShoppingCart'
 import slider_1 from './../assets/images/slider-1.jpg';
 import slider_2 from './../assets/images/slider-2.jpg';
 import slider_3 from './../assets/images/slider-3.jpg';
+import slider_4 from './../assets/images/slider-4.jpg';
 
 export const SLIDE_INFO = [
     { 
@@ -23,6 +24,12 @@ export const SLIDE_INFO = [
         id:"3",
         title:'Third Slide ', 
         imgUrl: slider_3, 
+        button: <Button><CartIcon /> Shop Now</Button>
+    },
+    { 
+        id:"4",
+        title:'Fourth Slide ', 
+        imgUrl: slider_4, 
         button: <Button><CartIcon /> Shop Now</Button>
     },
 ];

@@ -8,7 +8,7 @@ const config = {
   //   (process.env.MONGO_PORT || '27017') +
   //   '/kiriikou-db',
   mongoUri:"mongodb+srv://Phinehas:Phinehas86@cluster0.1gctm.mongodb.net/kiriikou-ecommerce?retryWrites=true&w=majority",
-   stripe_connect_test_client_id: "",
+  stripe_connect_test_client_id: "",
   stripe_test_secret_key: "",
   stripe_test_api_key: "",
   sendgrid_api_key:'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',

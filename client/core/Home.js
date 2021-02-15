@@ -96,6 +96,7 @@ export default function Home(){
     return(
   
       <CarouselItem 
+      interval={20} 
         onExiting={()=> setAnimating(true)}
         onExited={()=> setAnimating(false)}
         key={item.id} >
@@ -105,7 +106,7 @@ export default function Home(){
     )
   })
 
-
+  const [showInfo, setShowInfo] = useState(false)
     return (
 
 <>
@@ -124,16 +125,18 @@ export default function Home(){
                 <h6 id="support"><span className="fa fa-clock-o fa-lg" id="supp"></span>24/7 Support</h6>
                 </Grid>
                 <Grid item xs={3} sm={1} md={1} lg={2} xl={1} >
-                <h6 id="payment"><span className="fa fa-credit-card fa-lg" id="paynt"></span>Secure Payment</h6>
+                <h6 id="payment"><span className="fa fa-binoculars
+                 " id="paynt"></span>Find almost anything you want</h6>
                 </Grid>
               
                 <Grid item xs={12} sm={12}  md={7} lg={7} xl={7} >
                   <Carousel 
+                  
                   activeIndex={activeIndex}
                   next={next}
                   previous={previous}
                 >
-                  <CarouselIndicators items={content} activeIndex={activeIndex} onClickHandler={gotoIndex}  />
+                  <CarouselIndicators  items={content} activeIndex={activeIndex} onClickHandler={gotoIndex}  />
                   {slides}
                   <CarouselControl direction='prev' directionText='Previous' onClickHandler={previous} />
                   <CarouselControl direction='next' directionText='Next' onClickHandler={next} />
