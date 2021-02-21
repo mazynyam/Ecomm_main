@@ -37,10 +37,10 @@ const useStyles = makeStyles(theme => ({
   
   },
   
-  image: {
-    height: '80%',
+  // image: {
+  //   height: '80%',
     
-  },
+  // },
   
 }))
 
@@ -63,7 +63,7 @@ function Products(props){
           <GridList cellHeight={200} className={classes.gridList} cols={getGridListCols()}>
           {props.products.map((product, i) => (
             <GridListTile key={i} id="imtile">
-              <Link to={"/product/"+product._id}><img className={classes.image} src={'/api/product/image/'+product._id} alt={product.name} /></Link>
+              <Link to={"/product/"+product._id}><img id="prdimage" src={'/api/product/image/'+product._id} alt={product.name} /></Link>
               <GridListTileBar id="mytilebar"
                 title={<Link to={"/product/"+product._id} id="tileTitle">{product.name}</Link>}
                 subtitle={<span id="priceTitle">$ {product.price}</span>}

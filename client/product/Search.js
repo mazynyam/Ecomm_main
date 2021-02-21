@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import PropTypes from 'prop-types'
-import {makeStyles} from '@material-ui/core/styles'
+
+import { fade, makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card'
 import Divider from '@material-ui/core/Divider'
 import MenuItem from '@material-ui/core/MenuItem'
@@ -40,7 +41,11 @@ const useStyles = makeStyles(theme => ({
     padding: '0 8px',
     marginBottom: '20px',
     color:"#acd523",
-    backgroundColor:"#17293d"
+    backgroundColor:"#17293d",
+    '&:hover': {
+      backgroundColor: fade('#17293d', 0.8)
+      },
+ 
   }
 }))
 

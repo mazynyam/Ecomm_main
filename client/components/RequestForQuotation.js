@@ -10,11 +10,9 @@ import logoquote from './../assets/images/logoquote.jpg';
 
 const useStyles = makeStyles(theme => ({
 quote: {
-    
-   textDecorationColor:"#17293d",
+ textDecorationColor:"#17293d",
     color:"#17293d",
     '&:hover': {
-        color: fade('#17293d', 0.8),
         backgroundColor:fade("#acd523",0.7),
         textDecorationColor:"#17293d",
         },
@@ -26,25 +24,30 @@ quote: {
     
   },
   quotebtn: {
+    textDecorationColor:"#17293d",
     backgroundColor:"#acd523",
+    '&:hover': {
+        backgroundColor: fade('#acd523', 0.8),
+        textDecorationColor:"#17293d",
+        },
+   
     height:"50px",
    
 },
 specservice: {
     fontSize:"15px",
+   },
 
-   
-},
-quoteservice: {
-    backgroundColor:"#17293d",
-    color:"#fff",
+   quoteservice: {
+  
+ backgroundColor:"#17293d",
+    '&:hover': {
+        backgroundColor: fade('#17293d', 0.8),
+       },
+   color:"#fff",
     height:"80px",
     margin:"auto",
-    
-
-   
-    
-  },
+     },
 }))
 
 function RequestForQuotation() {

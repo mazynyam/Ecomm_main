@@ -30,7 +30,6 @@ const useStyles = makeStyles(theme => ({
   },
   nowsh: {
     padding:`${theme.spacing(1)}px ${theme.spacing(1)}px ${theme.spacing(1)}px`,
-    // color: theme.palette.openTitle,
     color:'#17293d',
     backgroundColor: '#808024',
     fontSize: '12px',
@@ -42,10 +41,7 @@ const useStyles = makeStyles(theme => ({
   viewButton: {
     verticalAlign: 'middle'
   },
-  // card: {
-  //   width: '100%',
-  //   display: 'inline-flex'
-  // },
+ 
   details: {
     display: 'inline-block',
     width: "100%"
@@ -54,11 +50,7 @@ const useStyles = makeStyles(theme => ({
     flex: '1 0 auto',
     padding: '16px 8px 0px'
   },
-  // cover: {
-  //   width: '65%',
-  //   height: 130,
-  //   margin: '8px'
-  // },
+
   controls: {
     marginTop: '8px'
   },

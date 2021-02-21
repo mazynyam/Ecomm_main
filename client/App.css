@@ -2,11 +2,17 @@
 height:400px;
  width:700px;
 }
+#prdimage {
+  height:77%;
+  
+}
+
 #inqitem{
   display:flex;
 }
 #logq{
    margin-left: -74px; 
+   margin-right: -34px; 
    float: left;
 }
 #prg{
@@ -608,14 +614,18 @@ body{
   border-bottom: 2px solid rgb(76, 118, 224);
 }
 @media only screen and (max-width: 280px){
-  #logq{
-    float: left;
-    margin-left: -40px;
-    margin-top: -70px;
-    margin-bottom: -40px;
-     /* display:inline-block;  */
-    /* margin-right: -40px;  */
+  #prdimage {
+    height:68%;
+    width: 100%;
+    
   }
+  #logq{
+    margin-left: -74px; 
+    float: left;
+    margin-top: -70px;
+    margin-bottom: -40px; 
+    margin-right: -45px; 
+ }
   #imgslide{
     height:130px;
      width:200px;
@@ -678,7 +688,7 @@ body{
 }
   #mytilebar {
     background-color: #17293d;
-    height:55px;
+    height:60px;
     text-align:left;
   width:300px;
   display:block;
@@ -1019,6 +1029,11 @@ body{
   
 }
 @media only screen and (min-width:281px) and (max-width: 300px)  {
+  #prdimage {
+    height:65%;
+    width: 100%;
+    
+  }
   #inqitem{
     display:block;
   }
@@ -1050,7 +1065,7 @@ body{
 }
   #mytilebar {
     background-color: #17293d;
-    height:55px;
+    height:64px;
     text-align:left;
   width:300px;
   display:block;
@@ -1086,6 +1101,11 @@ body{
 }
 }
 @media only screen and (min-width:301px) and (max-width: 374px)  {
+  #prdimage {
+    height:65%;
+    width: 100%;
+    
+  }
   #inqitem{
     display:block;
   }
@@ -1150,7 +1170,7 @@ body{
 }
   #mytilebar {
     background-color: #17293d;
-    height:65px;
+    height:64px;
     text-align:left;
   width:300px;
   display:block;
@@ -1183,6 +1203,11 @@ body{
   }
   }
   @media only screen and (min-width:375px) and (max-width: 400px)  {
+    #prdimage {
+      height:69%;
+      width: 100%;
+      
+    }
     #inqitem{
       display:block;
     }
@@ -1278,6 +1303,11 @@ body{
     }
     }
 @media only screen and (min-width:401px) and (max-width: 530px)  {
+  #prdimage {
+    height:69%;
+    width: 100%;
+    
+  }
   #inqitem{
     display:block;
   }
@@ -1372,6 +1402,11 @@ body{
   }
   }
   @media only screen and (min-width:535px) and (max-width: 740px)  {
+    #prdimage {
+      height:68%;
+      width: 100%;
+      
+    }
     #inqitem{
       display:block;
     }
@@ -1446,6 +1481,11 @@ body{
       }
     }
 @media only screen and (min-width:766px) and (max-width:800px)  {
+  #prdimage {
+    height:67%;
+    width: 60%;
+    
+  }
   #inqitem{
     display:block;
   }
@@ -1515,6 +1555,11 @@ display:block;
   }
 }
 @media only screen and (min-width:801px) and (max-width: 1200px)  {
+  #prdimage {
+    height:74%;
+    width: 70%;
+    
+  }
   #inqitem{
     display:block;
   }
