@@ -42,7 +42,7 @@ specservice: {
   
  backgroundColor:"#17293d",
     '&:hover': {
-        backgroundColor: fade('#17293d', 0.8),
+        backgroundColor: "#17293d",
        },
    color:"#fff",
     height:"80px",
