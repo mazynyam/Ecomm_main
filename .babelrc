@@ -11,7 +11,7 @@
     ],
     "plugins": [
       "react-hot-loader/babel",
-      "css-modules-transform"
-      
+      "css-modules-transform",
+      "@babel/plugin-proposal-class-properties"
     ]
   }

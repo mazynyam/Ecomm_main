@@ -12,6 +12,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import {create} from './api-product.js'
 import {Link, Redirect} from 'react-router-dom'
 import { MenuItem } from '@material-ui/core'
+import { fade} from '@material-ui/core/styles';
 
 
 const useStyles = makeStyles(theme => ({
@@ -30,7 +31,8 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     marginTop: theme.spacing(2),
-    color: theme.palette.openTitle,
+    color: "#acd523",
+    fontFamily:"Arial Black",
     fontSize: '1.2em'
   },
   textField: {
@@ -38,16 +40,38 @@ const useStyles = makeStyles(theme => ({
     marginRight: theme.spacing(1),
     width: 300
   },
-  submit: {
+ 
+  submitcancl: {
     margin: 'auto',
-    marginBottom: theme.spacing(2)
+    marginBottom: theme.spacing(2),
+  
+    
+    textDecorationColor:"white",
+  '&:hover': {
+       textDecorationColor:"#17293d",
+       
+       },
   },
+  submitme:{
+    margin: 'auto',
+    marginBottom: theme.spacing(2),
+    backgroundColor:'#17293d',
+    '&:hover': {
+      backgroundColor: fade('#17293d',1.0),
+    },
+    color:"white"
+     },
+  
   input: {
     display: 'none'
   },
   filename:{
     marginLeft:'10px'
+  },
+  upvideo:{
+    backgroundColor:'#acd523'
   }
+
 }))
 
 export default function NewProduct({match}) {
@@ -106,7 +130,7 @@ export default function NewProduct({match}) {
           </Typography><br/>
           <input accept="image/*" onChange={handleChange('image')} className={classes.input} id="icon-button-file" type="file"/>
           <label htmlFor="icon-button-file">
-            <Button variant="contained" color="secondary" component="span">
+            <Button variant="contained" className={classes.upvideo} component="span">
               Upload Image or Video
               <FileUpload/>
             </Button>
@@ -179,8 +203,8 @@ export default function NewProduct({match}) {
           }
         </CardContent>
         <CardActions>
-          <Button color="primary" variant="contained" onClick={clickSubmit} className={classes.submit}>Submit</Button>
-          <Link to={'/seller/shop/edit/'+match.params.shopId} className={classes.submit}><Button variant="contained">Cancel</Button></Link>
+          <Button color="primary" variant="contained" onClick={clickSubmit} className={classes.submitme}>Submit</Button>
+          <Link to={'/seller/shop/edit/'+match.params.shopId} className={classes.submitcancl}><Button variant="contained">Cancel</Button></Link>
         </CardActions>
       </Card>
     </div>)

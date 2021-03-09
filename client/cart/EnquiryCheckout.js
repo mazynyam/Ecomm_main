@@ -7,6 +7,7 @@ import Icon from '@material-ui/core/Icon'
 import auth from './../auth/auth-helper'
 import cart from './cart-helper.js'
 import MakeInquiry from './MakeInquiry'
+import Grid from '@material-ui/core/Grid'
 import { useFlutterwave, FlutterwaveButton } from 'react-flutterwave'
 
 const useStyles = makeStyles(theme => ({
@@ -17,7 +18,8 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     margin: '24px 16px 8px 0px',
-    color: theme.palette.openTitle
+    color: "#acd523",
+    fontFamily:"Arial Black"
   },
   subheading: {
     color: 'rgba(88, 114, 128, 0.87)',
@@ -99,6 +101,7 @@ export default function EnquiryCheckout (){
 
     return (
       <Card className={classes.card}>
+       
         <Typography type="title" className={classes.title}>
           Enquiry Checkout
         </Typography>
@@ -123,5 +126,6 @@ export default function EnquiryCheckout (){
             <MakeInquiry checkoutDetails={values.checkoutDetails} />
           
         </div>
+      
       </Card>)
 }

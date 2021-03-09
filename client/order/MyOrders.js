@@ -9,7 +9,7 @@ import Divider from '@material-ui/core/Divider'
 import auth from './../auth/auth-helper'
 import {listByUser} from './api-order.js'
 import {Link} from 'react-router-dom'
-import Header from '../core/Menu'
+
 const useStyles = makeStyles(theme => ({
   root: theme.mixins.gutters({
     maxWidth: 600,
@@ -19,7 +19,9 @@ const useStyles = makeStyles(theme => ({
   }),
   title: {
     margin: `${theme.spacing(2)}px 0 12px ${theme.spacing(1)}px`,
-    color: theme.palette.openTitle
+    color: "#acd523",
+    fontFamily:"Bitter,Arial Black",
+    fontSize:"15px",
   }
 }))
 
@@ -46,8 +48,6 @@ export default function MyOrders(){
   }, [])
 
     return (
-      <>
-      {/* <Header /> */}
       <Paper className={classes.root} elevation={4}>
         <Typography type="title" className={classes.title}>
           Your Orders
@@ -55,7 +55,7 @@ export default function MyOrders(){
         <List dense>
           {orders.map((order, i) => {
             return <span key={i}>
-                      <Link to={"/make-inquiry/"+order._id}>
+                      <Link to={"/order/"+order._id}>
                         <ListItem button>
                           <ListItemText primary={<strong>{"Order # "+order._id}</strong>} secondary={(new Date(order.created)).toDateString()}/>
                         </ListItem>
@@ -64,6 +64,5 @@ export default function MyOrders(){
                     </span>})}
         </List>
       </Paper>
-      </>
     )
 }

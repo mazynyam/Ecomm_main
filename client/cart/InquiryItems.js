@@ -12,8 +12,7 @@ import {makeStyles} from '@material-ui/core/styles'
 import cart from './cart-helper.js'
 import {Link} from 'react-router-dom'
 import { fade} from '@material-ui/core/styles';
-import Footer from '../core/Footer'
-import Menu from '../core/Menu'
+
 
 
 
@@ -46,21 +45,21 @@ const useStyles = makeStyles(theme => ({
     fontSize: '1.15em',
     marginBottom: '5px'
   },
-  subheading: {
-    color: 'rgba(88, 114, 128, 0.67)',
-    padding: '8px 10px 0',
-    cursor: 'pointer',
-    display: 'inline-block'
-  },
+  // subheading: {
+  //   color: 'rgba(88, 114, 128, 0.67)',
+  //   padding: '8px 10px 0',
+  //   cursor: 'pointer',
+  //   display: 'inline-block'
+  // },
   cart: {
     width: '100%',
     display: 'inline-flex'
   },
-  details: {
-    display: 'inline-block',
-    width: "100%",
-    padding: "4px"
-  },
+  // details: {
+  //   display: 'inline-block',
+  //   width: "100%",
+  //   padding: "4px"
+  // },
   content: {
     flex: '1 0 auto',
     padding: '16px 8px 0px'
@@ -185,22 +184,20 @@ export default function InquiryItems (props) {
     props.setEnquiryCheckout(true)
   }
 
-    return (
-    <>
-    <Menu />
-    <Card className={classes.card}>
+    return (<Card className={classes.card}>
       <Typography type="title" className={classes.title}>
         Make Inquiry
       </Typography>
       {enquiryItems.length>0 ? (<span>
           {enquiryItems.map((item, i) => {
             return <span key={i}><Card className={classes.cart}>
+              <div id="inqitem">
               <CardMedia
                 className={classes.cover}
                 image={'/api/product/image/'+item.product._id}
                 title={item.product.name}
               />
-              <div className={classes.details}>
+              <div id="details">
                 <CardContent className={classes.content}>
                   <Link to={'/product/'+item.product._id}><Typography type="title" component="h3" className={classes.productTitle} color="primary">{item.product.name}</Typography></Link>
                   <div>
@@ -209,7 +206,7 @@ export default function InquiryItems (props) {
                     <span className={classes.itemShop}>Shop: {item.product.shop.business_name}</span>
                   </div>
                 </CardContent>
-                <div className={classes.subheading}>
+                <div id="mysubheading">
                   Quantity: <TextField
                               value={item.quantity}
                               onChange={handleChange(i)}
@@ -225,7 +222,9 @@ export default function InquiryItems (props) {
                             <Button className={classes.removeButton} color="primary" onClick={removeItem(i)}>x Remove</Button>
                 </div>
               </div>
+              </div>
             </Card>
+            
             <Divider/>
           </span>})
         }
@@ -251,10 +250,7 @@ export default function InquiryItems (props) {
          
         </div>
     }
-    </Card>
-    <Footer />
-    </>
-    )
+    </Card>)
 }
 
 InquiryItems.propTypes = {

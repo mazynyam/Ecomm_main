@@ -10,8 +10,17 @@ import DialogContentText from '@material-ui/core/DialogContentText'
 import DialogTitle from '@material-ui/core/DialogTitle'
 import auth from './../auth/auth-helper'
 import {remove} from './api-product.js'
+import { makeStyles } from '@material-ui/core/styles'
+
+const useStyles = makeStyles(theme => ({
+  delpro: {
+    color: "#acd523"
+  },
+}))
 
 export default function DeleteProduct(props) {
+  const classes = useStyles()
+ 
   const [open, setOpen] = useState(false)
   
   const jwt = auth.isAuthenticated()
@@ -35,7 +44,7 @@ export default function DeleteProduct(props) {
     setOpen(false)
   }
     return (<span>
-      <IconButton aria-label="Delete" onClick={clickButton} color="secondary">
+      <IconButton aria-label="Delete" onClick={clickButton} className={classes.delpro}>
         <DeleteIcon/>
       </IconButton>
       <Dialog open={open} onClose={handleRequestClose}>

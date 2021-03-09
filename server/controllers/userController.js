@@ -26,88 +26,8 @@ const create = async (req, res) => {
       })
     }
 }
-const sendEmail = async(req, res, next)=>{
-  const msg = {
-    from:`${config.email_address}`,
-    to:user.email,
-    subject:'Kiriikou - Verify your email',
-    text:`Thank you for registering with us.
-    Please click on the link to verify your account.
-    http://${req.headers.host}/verify-email?${token.emailToken}`,
-    html:`
-    <h1>Hello ${user.name}</h1>
-    <p>
-    Thank you for registering with us.
-    Please click on the link to verify your account.
-    http://${req.headers.host}/verify-email?${user.emailToken}
-    </p>
-    `
-    }
-    sgMail
-    .send(msg)
-    .then(() => {
-      console.log('Email sent')
-    })
-    .catch((error) => {
-      console.error(error)
-    })
-}
-const resetPassword = async(req, res, next)=>{
-  async.waterfall([
-    function(done) {
-      crypto.randomBytes(20, function(err, buf) {
-        var token = buf.toString('hex');
-        done(err, token);
-      });
-    },
-    function(token, done) {
-      User.findOne({ email: req.body.email }, function(err, user) {
-        if (!user) {
-          req.flash('error', 'No account with that email address exists.');
-          return res.redirect('/forgot');
-        }
 
-        user.resetPasswordToken = token;
-        user.resetPasswordExpires = Date.now() + 3600000; // 1 hour
 
-        user.save(function(err) {
-          done(err, token, user);
-        });
-      });
-    },
-    function(token, user, done) {
-      
-      let msg = {
-        to: user.email,
-        from: `${config.email_address}`,
-        subject: 'Kiriikou Password Reset',
-        text: 'You are receiving this because you (or someone else) have requested the reset of the password for your account.\n\n' +
-          'Please click on the following link, or paste this into your browser to complete the process:\n\n' +
-          'http://' + req.headers.host + '/reset/' + token + '\n\n' +
-          'If you did not request this, please ignore this email and your password will remain unchanged.\n',
-        html:`<p>You are receiving this because you (or someone else) have requested the reset of the password for your account.\n\n
-          Please click on the following link, or paste this into your browser to complete the process:\n\n
-          http://' ${req.headers.host}/reset/${ token }\n\n
-          If you did not request this, please ignore this email and your password will remain unchanged.\n'</p>`
-      };
-      (async()=>{
-        try {
-          await sgmail.send(msg)
-          res.json({'success':`A Password Reset sent to ${user.email} `})
-          done(err, 'done')
-          res.redirect('/')
-        } catch (error) {
-          console.log(error)
-          res.json({'error': 'Something went wrong, Please contact support@kiriikou.com'})
-          req.redirect('/')
-        }
-      })();
-    }
-  ], function(err) {
-    if (err) return next(err);
-    res.redirect('/forgot');
-  });
-}
 const verifyEmail = async(req, res, next)=>{
   try {
     const user = await User.findOne({ emailToken: req.query.token })
@@ -269,8 +189,14 @@ const stripeCustomer = (req, res, next) => {
       })
   }
 }
-
 const createCharge = (req, res, next) => {
+  if(!req.profile.stripe_seller){
+    return res.status('400').json({
+      error: "Please connect your Stripe account"
+    })
+  }
+}
+const createCharges = (req, res, next) => {
   if(!req.profile.stripe_seller){
     return res.status('400').json({
       error: "Please connect your Stripe account"
@@ -315,6 +241,6 @@ export default {
   stripeCustomer,
   createCharge,
   verifyEmail,
-  resetPassword,
-  sendEmail
+ 
+ 
 }

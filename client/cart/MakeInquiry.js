@@ -8,6 +8,8 @@ import auth from './../auth/auth-helper'
 import cart from './cart-helper.js'
 import {create} from './../order/api-order.js'
 import {Redirect} from 'react-router-dom'
+// import Grid from '@material-ui/core/Grid'
+import { fade} from '@material-ui/core/styles';
 const useStyles = makeStyles(theme => ({
     subheading: {
       color: 'rgba(88, 114, 128, 0.87)',
@@ -17,6 +19,17 @@ const useStyles = makeStyles(theme => ({
       float: 'right',
       margin: '20px 30px'
     },
+    inquiry: {
+      backgroundColor:"#acd523",
+      fontFamily:"Arial Black",
+      fontSize:"12px",
+      color:'#17293d',
+      '&:hover': {
+        color: fade('#fff', 0.8),
+        backgroundColor: fade('#acd523', 0.6),
+       },
+       
+        },
 }))
 export default function MakeInquiry(props) {
     const classes = useStyles()
@@ -54,7 +67,7 @@ export default function MakeInquiry(props) {
               {values.error}
           </Typography>)
         }
-        <Button color="secondary" variant="contained" onClick={MakeInquiries}>Make Inquiry</Button>
+        <Button className={classes.inquiry} variant="contained" onClick={MakeInquiries}>Make Inquiry</Button>
       </div>
     )
 }

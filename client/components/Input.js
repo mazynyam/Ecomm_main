@@ -9,10 +9,10 @@ export default function Input({message, setMessage, sendMessage}) {
              placeholder="Type a message.." 
              className='input'
              value={message} 
-            onChange={(event) => setMessage(event.target.value)} 
+            onChange={() => setMessage()} 
             onKeyPress={(event) => event.key === 'Enter' ? sendMessage(event) : null}
             />
-            <button type="button" className="btn" onClick={(event)=> sendMessage(event)}>
+            <button type="button" className="btn" onClick={(event) => sendMessage(event)}>
                 <i className='fa fa-send'>
                 </i>
             </button>

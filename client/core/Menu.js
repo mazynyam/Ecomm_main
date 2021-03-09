@@ -15,7 +15,9 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import auth from './../auth/auth-helper'
 import {Link, withRouter} from 'react-router-dom'
+// import logo from './../assets/images/kik.png';
 import logo from './../assets/images/kik.png';
+import loggo from './../assets/images/ekiri.jpg';
 import {  list, listCategories } from './../product/api-product'
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -36,9 +38,11 @@ const useStyles = makeStyles((theme) => ({
   textColor:{
     listStyle:'none',
     color:' #acd523',
-    listStyle:'none',
+    textDecoration:"none",
     '&:hover': {
        color: fade('#acd523', 0.8),
+       textDecorationColor:"#acd523",
+    
        },
        marginRight:"0px",
   },
@@ -104,20 +108,38 @@ const useStyles = makeStyles((theme) => ({
       display: 'none',
     },
   },
+
+  namesh:{
+    textDecorationColor:"#acd523",
+   '&:hover': {
+        textDecorationColor:"#acd523",
+         },
+  },
+  mysh:{
+    textDecorationColor:"#acd523",
+    '&:hover': {
+      textDecorationColor:"#acd523",
+       },
+
+  }
 }));
 
 const  isActive = (history, path) =>{
     if(history.location.pathname.includes(path))
-    return { color: '#acd523'}
+    return { color: '#acd523',
+  textDecoration:"none"}
     else{
-        return { color: '#acd523'}
+        return { color: '#acd523',
+        textDecorationColor:"none"}
     }
 }
 const isPartActive = (history, path) => {
     if (history.location.pathname.includes(path))
-      return {color: '#acd523'}
+      return {color: '#acd523',
+      textDecoration:"none"}
     else
-      return {color: '#acd523'}
+      return {color: '#acd523',
+      textDecoration:"none"}
     
 }
 /**
@@ -224,9 +246,9 @@ const Header = withRouter(({history}) =>{
                {
                 auth.isAuthenticated() && (<span>
                   {auth.isAuthenticated().user.seller && (
-                  <Link to="/seller/shops"><Button style={isPartActive(history, "/seller/")}>My Shops</Button></Link>)}
+                  <Link to="/seller/shops" className={classes.mysh}><Button style={isPartActive(history, "/seller/")}>My Shops</Button></Link>)}
                   <MenuItem >
-                  <Link to={"/user/" + auth.isAuthenticated().user._id}>
+                  <Link className={classes.namesh} to={"/user/" + auth.isAuthenticated().user._id}>
                   <IconButton color="inherit" style={isActive(history, "/user/" + auth.isAuthenticated().user._id)}>
                     <Badge  color="secondary">
                     <AccountCircle />
@@ -289,13 +311,22 @@ const Header = withRouter(({history}) =>{
       <div className={classes.grow}>
         <AppBar position="static" className={classes.brp}>
           <Toolbar>
+                        
+          <Typography className={classes.title} variant="h6" noWrap>
+              <Link to='/' className={classes.textColor} id="bestft">
+              <img src={logo} alt='Logo' height='50' className={classes.kiimg} />
+              <img src={loggo} alt='Logo' height='50' id="kimg" />
+              
+              </Link>
+            </Typography>
             
-            <Typography className={classes.title} variant="h6" noWrap>
+            
+            {/* <Typography className={classes.title} variant="h6" noWrap>
               <Link to='/' className={classes.textColor} id="bestft">
               <img src={logo} alt='Logo' height='50' className={classes.kiimg} />
                 Kiriikou.com
               </Link>
-            </Typography>
+            </Typography> */}
             
             <div className={classes.grow} />
             <div className={classes.sectionDesktop}>
@@ -314,9 +345,9 @@ const Header = withRouter(({history}) =>{
           }
           {
                 auth.isAuthenticated() && (<span>
-                  {auth.isAuthenticated().user.seller && (<Link to="/seller/shops"><Button style={isPartActive(history, "/seller/")}>My Shops</Button></Link>)}
+                  {auth.isAuthenticated().user.seller && (<Link to="/seller/shops" className={classes.mysh}><Button style={isPartActive(history, "/seller/")}>My Shops</Button></Link>)}
                   
-                  <Link to={"/user/" + auth.isAuthenticated().user._id}>
+                  <Link  className={classes.namesh} to={"/user/" + auth.isAuthenticated().user._id}>
                     <Button style={isActive(history, "/user/" + auth.isAuthenticated().user._id)}>{auth.isAuthenticated().user.name}</Button>
                   </Link>
                     <Button color="inherit" onClick={() => {

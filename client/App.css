@@ -1,58 +1,143 @@
+#imgslide{
+height:400px;
+ width:700px;
+}
+#prdimage {
+  height:77%;
+  
+}
+
+#inqitem{
+  display:flex;
+}
+#logq{
+   margin-left: -74px; 
+   margin-right: -34px; 
+   float: left;
+}
+#prg{
+  overflow: auto;
+}
+#req{
+  margin-top: 0px;
+}
+
+#myname{
+  display: flex;
+}
+#sellproducts{
+  font-size: 30px;
+  margin-left: 30px;
+  margin-bottom: 40px;
+  color: #17293d;
+  font-family: 'Bitter';
+  font-weight: bold;}
+
+ #pcover {
+     width: 50%;
+    height: 150px;
+    margin: 10px;
+   }
+   #pdetails{
+    padding: 9px;
+   }
+
+#stitle{
+ margin-top:20px;
+ margin-right: 60px;
+    color: #acd523;
+    display: inline-block;
+}
+
 #kimg{
   height:55px;
   width:210px;
   justify-content:center;
   margin-bottom:20px;
     }
+    #mypr{
+      font-size: 22px;
+    margin-left: 0px;
+   }
+   #imtile{
+    text-align: center;
+  }
+    #sugcard {
+      width: 100%;
+      display:inline-flex;}
+      #inquire {
+        color:#ACD523;
+        
+           }
+      #icover {
+        width:65%;
+        height: 200px;
+        margin: 8px;
+      }
+      #myaction{
+        margin: 80px  5px 10px 5px;
+        display: inline-block;
+       
+      }
+    #myflex{
+      display:flex;
+    }
+    #mysubheading {
+      margin: 10px;
+      display:inline-block;
+      color:#17293d;
+    }
+   
+    #mymedia{
+      height: 200px;
+      display: inline-block;
+      width: 50%;
+      margin-left: '24px';
+      
+    }
+   
     #butcolor{
       background-color: "#acd523";
     }
     
-   
+    
     #myinquire{
       font-size: 12px;
-      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
-     
-    }  
+     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     display: block;
+      }  
 #tileTitle {
   font-size:0.8em;
   margin-bottom:2px;
 color:#fff;
+margin-right: -40px;
 
-  /* display:block; */
- 
 }
 #cattileTitle{
   height: 20px;
    width:100px;
-   
-    vertical-align: middle;
+   vertical-align: middle;
     line-height: 2.1;
     text-align: center;
     font-size: 1.2em;
      margin: 0 1px 0 5px;
     background-color: #17293d;
     font-family: 'Gill Sans',  Calibri, 'Trebuchet MS', sans-serif;
-    
-  
-  
-}
+    }
 
 #priceTitle {
   font-size:0.8em;
  color:#fff;
- margin-left: 17px;
+ margin-left: 8px;
  display:block;
  text-decoration:'none';
-
-  
 }
 #mytilebar {
   background-color: #17293d;
-  height:40px;
+  height:44px;
   text-align:left;
    margin-top:40px;
-  width:276px;
+  width:305px;
   
 }
 .sitewrapper {
@@ -100,7 +185,7 @@ color:#fff;
   border-style:none none none none;
   color:#fff;
   margin-top: 0px; 
-  margin-bottom: 10px;
+  margin-bottom: 13px;
   margin-left: 30px;
 }
 .textField {
@@ -133,9 +218,10 @@ color:#fff;
 }
 #moneycolour{
   color:#333;
-  margin-top:5px;
-  font-size:13px;
-  margin-left:0px;
+  margin-top:1px;
+  font-size:14px;
+  margin-left:5px;
+ 
 }
 #trt{
   color:#ACD523;
@@ -143,14 +229,14 @@ color:#fff;
 }
 #trust{
   color:#333;
-  margin-top:5px;
+  margin-top:3px;
   font-size:13px;
   margin-left:0px;
 }
 #support{
   
   color:#333;
-  margin-top:5px;
+  margin-top:3px;
   font-size:13px;
   margin-left:0px;
 }
@@ -160,7 +246,7 @@ color:#fff;
 #payment{
   
   color:#333;
-  margin-top:5px;
+  margin-top:3px;
   font-size:13px;
   margin-left:0px;
 }
@@ -259,7 +345,6 @@ a:hover{
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  /* padding: 8px 0px 8px 16px ; */
   list-style: none;
   height: 60px;
 }
@@ -530,11 +615,120 @@ body{
   border-bottom: 2px solid rgb(76, 118, 224);
 }
 @media only screen and (max-width: 280px){
+
+  #prdimage {
+    height:68%;
+    width: 100%;
+    
+  }
+  #logq{
+    margin-left: -74px; 
+    float: left;
+    margin-top: -70px;
+    margin-bottom: -40px; 
+    margin-right: -45px; 
+ }
+  #imgslide{
+    height:130px;
+     width:200px;
+    }
+  #sellproducts{
+    font-size: 20px;
+    margin-left: -110px;
+    width: 600px;
+    height: 60px;
+    color: #acd523;
+    font-family: 'Bitter';
+    font-weight: bold;}
+  #icbtn{
+    margin-right: -45px;
+  }
+  #myname{
+    display: inline-block;
+  }
+  #stitle{
+ 
+    margin-top: 5px;
+    margin-right: 20px;
+    color: #acd523;
+ 
+}
+#inqitem{
+  display:block;
+}
+#plist{
+  display: block;
+}
+#ptitle{
+ 
+  margin-right: 40px;
+  margin-top: 20px;
+}
+  #pcover {
+    width: 110px;
+   height: 100px;
+   margin: 8px;
+  
+  }
+  #pdetails{
+   padding: 10px;
+  
+  }
+  #tileTitle {
+    font-size:6px;
+ color:#fff;
+ display:block;
+ margin-left: 1px;
+}
+  
+  #priceTitle {
+    font-size:10px;
+   color:#fff;
+   display:block;
+ margin-left: 8px;
+ 
+}
+  #mytilebar {
+    background-color: #17293d;
+    height:60px;
+    text-align:left;
+  width:300px;
+  display:block;
+  
+    }
+    #inqpr{
+       margin-top: -30px; 
+      margin-left: 12px; 
+    
+      display:block;
+      font-size: 13px;
+    }
+    
+  #inquire {
+    color:#ACD523;
+        display:block;
+     }
+  #mypr{
+    font-size: 12px;
+    margin-left: 0px;
+   display: block;
+  }
+ 
+      #myinquire{
+        font-size: 9px;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        display:block;
+        margin-left: -25px;
+        }  
   .rfq-quotation .rfq-content {
     width: 100%;
     margin-bottom: 40px;
     height: 100%;
     display:block;
+  }
+  #content {
+    display: block;
+    padding:16px 8px 0px;
   }
   .title-info{
     display: block;
@@ -556,21 +750,78 @@ body{
     bottom:0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
+  #myflex{
+    display:block;
+  }
+
+  #mysubheading {
+    margin: 10px;
+    display:block;
+    color:#17293d;
+    width: 100%;
+  }
+  #myaction{
+    margin: 8px 5px;
+    font-size: 10px;
+    display:block;
+   
+  }
+  
+  #mymedia{
+    height: 200px;
+    display: inline-block;
+    width: 115%;
+    margin-left: '9px';
+    
+  }
 }
 @media only screen and (min-width: 200px) and (max-width: 1089px)  {
+  #moneycolour{
+    color:#333;
+    margin-top:5px;
+    font-size:11px;
+    margin-left:0px;
+  }
+  #trt{
+    color:#ACD523;
+    margin-top: 20px;
+  }
+  #trust{
+    color:#333;
+    margin-top:5px;
+    font-size:11px;
+    margin-left:0px;
+  }
+  #support{
+    
+    color:#333;
+    margin-top:5px;
+    font-size:11px;
+    margin-left:0px;
+  }
+  #supp{
+    color:#ACD523;
+    margin-top: 20px;}
+  #payment{
+    
+    color:#333;
+    margin-top:5px;
+    font-size:11px;
+    margin-left:0px;
+  }
+  #paynt{
+    color:#ACD523;
+    margin-top: 20px;
+  }
   .footer {
     background-color:#17293d;
     margin: 0px auto;
     color:rgb(193, 199, 204);
-    /* height:30; */
-    /* position: fixed;   */
     width: 100%;
     font-size:11;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
-  /* .gridList{
-    min-width: '100%';
-  } */
+  
   .MuiGridListTile-root{
     display:block
   }
@@ -595,6 +846,12 @@ body{
 
 
 @media only screen and (max-width: 540px)  {
+  
+  #inquire {
+    color:#ACD523;
+        display:block;
+     }
+  
   html,body
 {
     width: 100%;
@@ -665,7 +922,21 @@ body{
   margin-bottom: 20px;
 }
 @media only screen and (min-width: 20px) and (max-width: 545px)  {
+  #sugcard{
+    display:block;
+  }
+  #icover{
+   height: 200px;
+      display: inline-block;
+      width: 100%;
+      margin-left: '9px';
+    }
   
+  
+  #details {
+    display: block;
+    width:100%;
+    padding:4px;}
   
   #kimg{
     height:40px;
@@ -683,41 +954,20 @@ body{
           margin-left: 0px;
 
         }
-  #tileTitle {
-    font-size:8px;
- color:#fff;
-  display:block;
-   }
-  
-  #priceTitle {
-    font-size:8px;
-   color:#fff;
-  
-   display:block;
-   text-decoration:'none';
+        #imtile{
+          text-align: left;
+        }
   
     
-  }
-  
-  #mytilebar {
-    background-color: #17293d;
-    height:65px;
-    text-align:left;
-    display: block;
-    width:300px;
-    margin-top:60px;
-    
-    
-    
-  }
-      /* #myflex{
-        display:block;
-      } */
 }
 
 @media only screen and (min-width: 20px) and (max-width: 420px)  {
   
-  
+  #mypr{
+    font-size: 12px;
+    margin-left: 0px;
+   display: block;
+  }
   #kimg{
     height:40px;
     width:130px;
@@ -725,120 +975,259 @@ body{
     margin-bottom:20px;
       }
       #myinquire{
-        font-size: 7px;
+        font-size: 10px;
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        display:block;
         }  
-
-        #addinquiry{
+#addinquiry{
           justify-content: left;
           margin-left: 0px;
 
         }
-  #tileTitle {
-    font-size:7px;
- color:#fff;
-  display:block;
-   }
+
   
-  #priceTitle {
-    font-size:7px;
-   color:#fff;
-  
-   display:block;
-   text-decoration:'none';
-  
-    
-  }
-  
-  #mytilebar {
-    background-color: #17293d;
-    height:65px;
-    text-align:left;
-    display: block;
-    width:300px;
-    margin-top:60px;
-    
-    
-    
-  }
-      /* #myflex{
-        display:block;
-      } */
+      
 }
 
 
 @media only screen and (min-width: 900px) and (max-width: 1024px)  {
-  /* .footer {
-    background-color:#17293d;
-     position: fixed;
-    bottom: 0px; 
-    color:rgb(193, 199, 204); 
-    height:100px;
-    width: 100%;
-    display:block;
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
-  #myflex{
-    display:block;
-  }
-}
-@media only screen and (max-width: 378px)  {
-  #mymedia{
-    height: 300px;
-    display: inline-block;
-    width: 100px;
-    margin-left: '5px';
-    
-  }
-  #bestft{
-    font-family:"Gilbert Color";
-       font-weight:bolder;
-      font-size: 17px;
-  } */
+  
   #kimg{
     height:50px;
     width:150px;
     justify-content:center;
     margin-bottom:20px;
       }
-      /* .footer {
-        background-color:#17293d;
-         position: fixed;
-        bottom: 0px; 
-        color:rgb(193, 199, 204); 
-        height:90px;
-        width: 100%;
-        display:block;
-       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      }
-      #copytbar{
-        background-color:#17293d;
-        color:#ACD523;
-        font-style: normal;
-        font-family:"Arial";
-        font-weight:bold;
-        font-size: 8px;
-        margin-top: 25px;
-      
-      
-      }
-      #textbar{
-        font-size:8px;
-        margin-top: 7px;
-      }
-      #myflex{
-        display:block;
-      } */
+   
  
 }
 @media only screen and (min-width:330px) and (max-width: 750px)  {
-  /* #mymedia{
-    height: 180px;
+  #icbtn{
+    margin-right: -45px;
+  }
+  #myname{
+    display: inline-block;
+  }
+  #stitle{
+ 
+    margin-top: 5px;
+    margin-right: 20px;
+    color: #acd523;
+ 
+}
+#plist{
+  display: block;
+}
+#ptitle{
+ 
+  margin-right: 40px;
+  margin-top: 20px;
+}
+  #pcover {
+    width: 110px;
+   height: 100px;
+   margin: 8px;
+  
+  }
+  #pdetails{
+   padding: 10px;
+  
+  }
+  #sugcard{
+  display:block
+ 
+}
+#icover{
+ 
+  height: 180px;
     display: inline-block;
     width: 200px;
-    margin-left: '9px';
+    margin-left: '9px';}
+ 
+  #mysubheading {
+    margin: 10px;
+    display:block;
+    color:#17293d;
+  }
+  #mymedia{
+    height: 400px;
+    display:block;
+    width: 100%;
+    margin-left: '60px';
     
   }
+  
+ 
+  #myflex{
+    display:block;
+  }
+  #myaction{
+    margin: 8px 5px;
+    display: block;
+  }
+  
+}
+@media only screen and (min-width:281px) and (max-width: 300px)  {
+  #prdimage {
+    height:65%;
+    width: 100%;
+    
+  }
+  #inqitem{
+    display:block;
+  }
+  #imgslide{
+    height:130px;
+     width:200px;
+    }
+  #sellproducts{
+    font-size: 20px;
+    margin-left: -110px;
+    width: 600px;
+    height: 60px;
+    color: #acd523;
+    font-family: 'Bitter';
+    font-weight: bold;}
+  #tileTitle {
+    font-size:6px;
+ color:#fff;
+ display:block;
+ margin-left: 5px;
+}
+  
+  #priceTitle {
+    font-size:10px;
+   color:#fff;
+   display:block;
+ margin-left: 5px;
+ 
+}
+  #mytilebar {
+    background-color: #17293d;
+    height:64px;
+    text-align:left;
+  width:300px;
+  display:block;
+  
+    }
+    #inqpr{
+       margin-top: -30px; 
+      margin-left: 12px; 
+    
+      display:block;
+      font-size: 13px;
+    }
+    
+#mymedia{
+  height: 120px;
+  display:block;
+  width: 57%;
+  margin-left: '60px';
+  
+}
+
+#mysubheading {
+  margin: 20px;
+ display: block;
+  color:#17293d;
+}
+#myflex{
+  display:block;
+}
+#myaction{
+  margin: 8px 5px;
+  display: block;
+}
+}
+@media only screen and (min-width:301px) and (max-width: 374px)  {
+  #prdimage {
+    height:65%;
+    width: 100%;
+    
+  }
+  #inqitem{
+    display:block;
+  }
+  #imgslide{
+    height:180px;
+     width:300px;
+    }
+  #sellproducts{
+    font-size: 25px;
+    margin-left: -105px;
+    width: 600px;
+    height: 60px;
+    color: #acd523;
+    font-family: 'Bitter';
+    font-weight: bold;}
+  #icbtn{
+    margin-right: -45px;
+  }
+  #myname{
+    display: inline-block;
+  }
+  #stitle{
+ 
+    margin-top: 5px;
+    margin-right: 20px;
+    color: #acd523;
+ 
+}
+#plist{
+  display: block;
+}
+#ptitle{
+ 
+  margin-right: 40px;
+  margin-top: 20px;
+}
+  #pcover {
+    width: 110px;
+   height: 100px;
+   margin: 8px;
+  
+  }
+  #pdetails{
+   padding: 10px;
+  
+  }
+  #tileTitle {
+    font-size:10px;
+ color:#fff;
+ display:inline-block;
+ text-align: right;
+ margin-left: 5px;
+
+    }
+  
+  #priceTitle {
+    font-size:11px;
+   color:#fff;
+   display:block;
+ margin-left: 5px;
+ 
+}
+  #mytilebar {
+    background-color: #17293d;
+    height:64px;
+    text-align:left;
+  width:300px;
+  display:block;
+  
+    }
+    #inqpr{
+      margin-top: -28px;
+      margin-left: -9px;
+      display:block;
+    }
+  #mymedia{
+    height: 120px;
+    display:block;
+    width: 69%;
+    margin-left: '60px';
+    
+  }
+  
   #mysubheading {
     margin: 20px;
    display: block;
@@ -851,11 +1240,423 @@ body{
     margin: 8px 5px;
     display: block;
   }
-  #supimage {
-    height: 150px;
-    width:100px;
-    margin-left: 0px;
+  }
+  @media only screen and (min-width:375px) and (max-width: 400px)  {
+    #prdimage {
+      height:69%;
+      width: 100%;
+      
+    }
+    #inqitem{
+      display:block;
+    }
+    #imgslide{
+      height:180px;
+       width:300px;
+      }
+    #sellproducts{
+      font-size: 30px;
+      margin-left: -105px;
+      width: 600px;
+      height: 60px;
+      color: #acd523;
+      font-family: 'Bitter';
+      font-weight: bold;}
+    #icbtn{
+      margin-right: -45px;
+    }
+    #myname{
+      display: inline-block;
+    }
+    #stitle{
+   
+      margin-top: 5px;
+      margin-right: 20px;
+      color: #acd523;
+   
+  }
+  #plist{
+    display: block;
+  }
+  #ptitle{
+   
+    margin-right: 40px;
+    margin-top: 20px;
+  }
+    #pcover {
+      width: 110px;
+     height: 100px;
+     margin: 8px;
     
-  } */
+    }
+    #pdetails{
+     padding: 10px;
+    
+    }
+    #tileTitle {
+      font-size:10px;
+   color:#fff;
+   display:block;
+   margin-left: 5px;
+  
+      }
+    
+    #priceTitle {
+      font-size:11px;
+     color:#fff;
+     display:block;
+   margin-left: 5px;
+  }
+    #mytilebar {
+      background-color: #17293d;
+      height:55px;
+      text-align:left;
+    width:300px;
+    display:block;
+    
+      }
+      #inqpr{
+        margin-top: -37px;
+        margin-left: -12px;
+        display:block;
+      }
+    #mymedia{
+      height: 120px;
+      display:block;
+      width:50%;
+      margin-left: '60px';
+      
+    }
+    
+    #mysubheading {
+      margin: 20px;
+     display: block;
+      color:#17293d;
+    }
+    #myflex{
+      display:block;
+    }
+    #myaction{
+      margin: 8px 5px;
+      display: block;
+    }
+    }
+@media only screen and (min-width:401px) and (max-width: 530px)  {
+  #prdimage {
+    height:69%;
+    width: 100%;
+    
+  }
+  #inqitem{
+    display:block;
+  }
+  #imgslide{
+    height:250px;
+     width:350px;
+    }
+  #sellproducts{
+    font-size: 30px;
+    margin-left: -80px;
+    width: 600px;
+    height: 60px;
+    color: #acd523;
+    font-family: 'Bitter';
+    font-weight: bold;}
+  #icbtn{
+    margin-right: -45px;
+  }
+  #myname{
+    display: inline-block;
+  }
+  #stitle{
+ 
+    margin-top: 5px;
+    margin-right: 20px;
+    color: #acd523;
+ 
+}
+#plist{
+  display: block;
+}
+#ptitle{
+ 
+  margin-right: 40px;
+  margin-top: 20px;
+}
+  #pcover {
+    width: 110px;
+   height: 100px;
+   margin: 8px;
+  
+  }
+  #pdetails{
+   padding: 10px;
+  
+  }
+  #tileTitle {
+    font-size:10px;
+ color:#fff;
+ display:block;
+ margin-left: 5px;
+    }
+  
+  #priceTitle {
+    font-size:11px;
+   color:#fff;
+   display:block;
+ margin-left: 5px;
+}
+  #mytilebar {
+    background-color: #17293d;
+    height:59px;
+    text-align:left;
+  width:300px;
+  display:block;
+  
+    }
+    #inqpr{
+      margin-top: -35px;
+      margin-left: -12px;
+      display:block;
+    }
+  #mymedia{
+    height: 200px;
+    display:block;
+    width: 70%;
+    margin-left: '60px';
+    
+  }
+  
+  #mysubheading {
+    margin: 20px;
+   display: block;
+    color:#17293d;
+  }
+  #myflex{
+    display:block;
+  }
+  #myaction{
+    margin: 8px 5px;
+    display: block;
+  }
+  }
+  @media only screen and (min-width:535px) and (max-width: 740px)  {
+    #prdimage {
+      height:68%;
+      width: 100%;
+      
+    }
+    #inqitem{
+      display:block;
+    }
+    #imgslide{
+      height:350px;
+       width:450px;
+      }
+    #sellproducts{
+      font-size: 30px;
+      margin-left: -50px;
+      width: 600px;
+      height: 100px;
+      color: #17293d;
+      font-family: 'Bitter';
+      font-weight: bold;}
+    #icbtn{
+      margin-right: -45px;
+    }
+    #myname{
+      display: inline-block;
+    }
+    #stitle{
+   
+      margin-top: 5px;
+      margin-right: 20px;
+      color: #acd523;
+   
+  }
+  #plist{
+    display: block;
+  }
+  #ptitle{
+   
+    margin-right: 40px;
+    margin-top: 20px;
+  }
+    #pcover {
+      width: 110px;
+     height: 100px;
+     margin: 8px;
+    
+    }
+    #pdetails{
+     padding: 10px;
+    
+    }
+    #tileTitle {
+      font-size:10px;
+   color:#fff;
+   display:block;
+   margin-left: 5px;
+      }
+    
+    #priceTitle {
+      font-size:11px;
+     color:#fff;
+     display:block;
+   margin-left: 5px;
+  }
+    #mytilebar {
+      background-color: #17293d;
+      height:59px;
+      text-align:left;
+    width:300px;
+    display:block;
+    
+      }
+      #inqpr{
+        margin-top: -30px;
+        margin-left: -12px;
+        display:block;
+      }
+    }
+@media only screen and (min-width:766px) and (max-width:800px)  {
+  #prdimage {
+    height:67%;
+    width: 60%;
+    
+  }
+  #inqitem{
+    display:block;
+  }
+
+#tileTitle {
+  font-size:11px;
+color:#fff;
+display:block;
+margin-left: 5px;
 }
 
+#priceTitle {
+  font-size:12px;
+ color:#fff;
+ display:block;
+margin-left: 2px;
+margin-bottom: 2px;
+
+}
+#mytilebar {
+  background-color: #17293d;
+  height:60px;
+  text-align:left;
+width:300px;
+display:block;
+
+  }
+  #inqpr{
+     margin-top: -10px; 
+    margin-left: 9px; 
+  display:block;
+    font-size: 13px;
+  }
+  #myinquire{
+    font-size: 11px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display:block;
+    margin-left: -25px;
+    }  
+  
+ 
+  #imgslide{
+    height:550px;
+     width:700px;
+    }
+ 
+  #mysubheading {
+    margin: 10px;
+    display:block;
+    color:#17293d;
+  }
+  #mymedia{
+    height: 450px;
+    display:block;
+    width: 70%;
+    margin-left: '60px';
+    
+  }
+  
+  
+  #myflex{
+    display:block;
+  }
+  #myaction{
+    margin: 8px 5px;
+    display: block;
+  }
+}
+@media only screen and (min-width:801px) and (max-width: 1200px)  {
+  #prdimage {
+    height:74%;
+    width: 70%;
+    
+  }
+  #inqitem{
+    display:block;
+  }
+  #icbtn{
+    margin-right: -45px;
+  }
+  #myname{
+    display: inline-block;
+  }
+  #stitle{
+ 
+    margin-top: 5px;
+    margin-right: 20px;
+    color: #acd523;
+ 
+}
+#plist{
+  display: block;
+}
+#ptitle{
+ 
+  margin-right: 40px;
+  margin-top: 20px;
+}
+  #pcover {
+    width: 110px;
+   height: 100px;
+   margin: 8px;
+  
+  }
+  #pdetails{
+   padding: 10px;
+  
+  }
+  
+  #mysubheading {
+    margin: 10px;
+    display:block;
+    color:#17293d;
+  }
+  #mymedia{
+    height: 500px;
+    display:block;
+    width: 55%;
+    margin-left: '60px';
+    
+  }
+  
+  #mysubheading {
+    margin: 20px;
+   display: block;
+    color:#17293d;
+  }
+  #myflex{
+    display:block;
+  }
+  #myaction{
+    margin: 8px 5px;
+    display: block;
+  }
+}

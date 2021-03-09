@@ -10,7 +10,10 @@ import GridListTile from '@material-ui/core/GridListTile'
 import Icon from '@material-ui/core/Icon'
 import {list} from './api-product.js'
 import Products from './Products'
-
+import { useHistory, useLocation} from 'react-router-dom';
+import {
+  CPagination
+} from '@coreui/react'
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
@@ -68,8 +71,7 @@ const useStyles = makeStyles(theme => ({
     fontSize: '0.9em'
   },
   link: {
-    color:'#fff',
-    
+  
     cursor:'pointer',
     marginLeft:'0px',
     
@@ -79,7 +81,15 @@ export default function Categories(props){
   const classes = useStyles()
   const [products, setProducts] = useState([])
   const [selected, setSelected] = useState(props.categories[0])
+  const history = useHistory()
+  const queryPage = useLocation().search.match(/page=([0-9]+)/, '')
+  const currentPage = Number(queryPage && queryPage[1] ? queryPage[1] : 1)
+  const [page, setPage] = useState(currentPage) 
+  const [skip, setSkip] = useState(5);
 
+  const pageChange = newPage => {
+    currentPage !==  setSkip(skip + newPage) 
+  }
   useEffect(() => {
     const abortController = new AbortController()
     const signal = abortController.signal
@@ -92,11 +102,13 @@ export default function Categories(props){
       } else {
         setProducts(data)
       }
-    })
+    }) 
+    currentPage !== page && setPage(currentPage)
     return function cleanup(){
       abortController.abort()
     }
-  }, [])
+  }, [currentPage, page])
+ 
 
   const listbyCategory = category => event => {
     setSelected(category)
@@ -120,8 +132,8 @@ export default function Categories(props){
           <div className={classes.root}>
             <GridList className={classes.gridList} cols={4}>
               {props.categories.map((tile, i) => (
-                <GridListTile key={i} className={classes.tileTitle} id="cattileTitle" style={{height: '48px', width:"276px", backgroundColor: selected == tile? '#17293d':'#17293d'}}>
-                  <span className={classes.link} onClick={listbyCategory(tile)}>{tile}  <Icon className={classes.icon}>{selected == tile && 'arrow_drop_down'}</Icon></span>
+              <GridListTile key={i}  id="cattileTitle" style={{height:"50px", width:'276px',  backgroundColor: selected == tile? '#17293d':'#acd523',color: selected == tile? '#fff':'#17293d'}}>
+                  <span className={classes.link} onClick={listbyCategory(tile)}> {tile} <Icon className={classes.icon}>{selected == tile && 'arrow_drop_down'}</Icon></span>
                 </GridListTile>
               ))}
             </GridList>
@@ -129,6 +141,13 @@ export default function Categories(props){
           <Divider/>
           <Products products={products} searched={false}/>
         </Card>
+        <CPagination
+            activePage={page}
+            onActivePageChange={pageChange}
+            pages={5}
+            doubleArrows={false} 
+            align="center"
+          />
       </div>
     )
 }

@@ -19,8 +19,11 @@ import DialogContent from '@material-ui/core/DialogContent'
 import DialogContentText from '@material-ui/core/DialogContentText'
 import DialogTitle from '@material-ui/core/DialogTitle'
 import Avatar from '@material-ui/core/Avatar'
+import { fade} from '@material-ui/core/styles';
+
 
 const useStyles = makeStyles(theme => ({
+
     card: {
       maxWidth: 600,
       margin: 'auto',
@@ -38,7 +41,8 @@ const useStyles = makeStyles(theme => ({
     },
     title: {
       marginTop: theme.spacing(2),
-      color: theme.palette.openTitle,
+      color: "#acd523",
+      fontFamily:"Arial Black",
       fontSize: '1em'
     },
     textField: {
@@ -48,14 +52,37 @@ const useStyles = makeStyles(theme => ({
     },
     submit: {
       margin: 'auto',
-      marginBottom: theme.spacing(2)
+      marginBottom: theme.spacing(2),
+      // backgroundColor:'#17293d',
+      
+      textDecorationColor:"white",
+    '&:hover': {
+        //  backgroundColor: fade('#17293d'),
+         textDecorationColor:"#17293d",
+         
+         },
     },
+    submitme:{
+      margin: 'auto',
+      marginBottom: theme.spacing(2),
+      backgroundColor:'#17293d',
+      '&:hover': {
+        backgroundColor: fade('#17293d',1.0),
+      },
+      color:"white"
+       },
     input: {
       display: 'none'
     },
     filename:{
       marginLeft:'10px'
+    },
+    cardpic:{
+      backgroundColor:"#acd523",
+      '&:hover': {
+        backgroundColor:('#acd523'),
     }
+  }
   }))
 
 export default function NewBusiness(){
@@ -147,7 +174,7 @@ export default function NewBusiness(){
                 <Avatar src={logoUrl} className={classes.bigAvatar}/><br/>
               <input accept="image/*" onChange={handleChange('image')} className={classes.input} id="icon-button-file" type="file" />
               <label htmlFor="icon-button-file">
-                <Button variant="contained" color="default" component="span">
+                <Button variant="contained" className={classes.cardpic} component="span">
                   Upload Logo
                   <FileUpload/>
                 </Button>
@@ -204,7 +231,7 @@ export default function NewBusiness(){
                     <div>
                         <input accept="image/*" onChange={handleBusinessCert('business_certificate')} className={classes.input} id="icon-button-file-one" type="file" />
                         <label htmlFor="icon-button-file-one">
-                            <Button variant="contained" color="secondary" component="span">
+                            <Button variant="contained" className={classes.cardpic} component="span">
                             Upload Business Certificate
                             <FileUpload/>
                             </Button>
@@ -217,7 +244,7 @@ export default function NewBusiness(){
                         <div>
                             <input accept="image/*" onChange={handleIdCardFront('identity_card_front')} className={classes.input} id="icon-button-file-two" type="file" />
                             <label htmlFor="icon-button-file-two">
-                                <Button variant="contained" color="secondary" component="span">
+                                <Button variant="contained" className={classes.cardpic} component="span">
                                 Upload an ID Card Front
                                 <FileUpload/>
                                 </Button>
@@ -225,7 +252,7 @@ export default function NewBusiness(){
                          
                          <input accept="image/*" onChange={handleIdCardBack('identity_card_back')} className={classes.input} id="icon-button-file-three" type="file" />
                               <label htmlFor="icon-button-file-three">
-                                  <Button variant="contained" color="secondary" component="span">
+                                  <Button variant="contained" className={classes.cardpic} component="span">
                                   Upload an ID Card Back
                                   <FileUpload/>
                                   </Button>
@@ -245,8 +272,8 @@ export default function NewBusiness(){
                
             </CardContent>
             <CardActions>
-                    <Button color="primary" variant="contained" onClick={clickSubmit} className={classes.submit}>Submit</Button>
-                    <Link to='/seller/shops' className={classes.submit}><Button variant="contained">Cancel</Button></Link>     
+                    <Button  variant="contained" onClick={clickSubmit} className={classes.submitme}>Submit</Button>
+                    <Link to='/seller/shops' className={classes.submit}><Button className={classes.submitBtn} variant="contained">Cancel</Button></Link>     
             </CardActions>
 
         </Card>

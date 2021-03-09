@@ -16,7 +16,7 @@ const Chat = ( ) => {
     const [ room, setRoom ] = useState('')
     const [ name, setName ] = useState('')
 
-    const ENDPOINT =  `localhost:${config.port}` || "https://kiriiikou-ecommerce-site.herokuapp.com"
+    const ENDPOINT =  `localhost:${config.port}`
     
 
     socket = io(ENDPOINT)
@@ -41,13 +41,13 @@ const Chat = ( ) => {
             setMessages([...messages, message])
         })
     },[messages])
-    const sendMessage = event =>{
-        event.preventDefault()
+    const sendMessage = e =>{
+        e.preventDefault()
         if(message){
             socket.emit('sendMessage', message, ()=> setMessage(''))
         }
     }
-    // console.log(message, messages)
+    
     const ChatMessage = ()=>{
         return(
         <div>

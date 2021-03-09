@@ -17,6 +17,8 @@ import DeleteUser from './DeleteUser'
 import auth from './../auth/auth-helper'
 import {read} from './api-user.js'
 import {Redirect, Link} from 'react-router-dom'
+import config from './../../config/config'
+import stripeButton from './../assets/images/stripeButton.png'
 import MyOrders from './../order/MyOrders'
 
 const useStyles = makeStyles(theme => ({
@@ -28,7 +30,8 @@ const useStyles = makeStyles(theme => ({
   }),
   title: {
     margin: `${theme.spacing(3)}px 0 ${theme.spacing(2)}px`,
-    color: theme.palette.protectedTitle
+    color:"#acd523",
+    fontFamily:"Arial Black"
   },
   stripe_connect: {
     marginRight: '10px',

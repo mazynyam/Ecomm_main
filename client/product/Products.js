@@ -36,13 +36,11 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
   
   },
-  tile: {
-    textAlign: 'center'
-  },
-  image: {
-    height: '80%',
+  
+  // image: {
+  //   height: '80%',
     
-  }
+  // },
   
 }))
 
@@ -53,7 +51,7 @@ function Products(props){
       return 4;
     }
     if (isWidthUp('md', props.width)) {
-      return 4;
+      return 3;
     }
     return 2;
     
@@ -64,13 +62,13 @@ function Products(props){
         (<div className={classes.container}>
           <GridList cellHeight={200} className={classes.gridList} cols={getGridListCols()}>
           {props.products.map((product, i) => (
-            <GridListTile key={i} className={classes.tile}>
-              <Link to={"/product/"+product._id}><img className={classes.image} src={'/api/product/image/'+product._id} alt={product.name} /></Link>
+            <GridListTile key={i} id="imtile">
+              <Link to={"/product/"+product._id}><img id="prdimage" src={'/api/product/image/'+product._id} alt={product.name} /></Link>
               <GridListTileBar id="mytilebar"
                 title={<Link to={"/product/"+product._id} id="tileTitle">{product.name}</Link>}
                 subtitle={<span id="priceTitle">$ {product.price}</span>}
-                actionIcon={
-                  <AddToInquiry  item= {product}/>
+                actionIcon={<span id="inqpr">{
+                  <AddToInquiry item= {product} />}</span>
                 }
               />
             </GridListTile>

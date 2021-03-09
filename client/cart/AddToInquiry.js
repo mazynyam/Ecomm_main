@@ -13,6 +13,10 @@ const useStyles = makeStyles(theme => ({
     height: '28px',
     color:'#ACD523'
   },
+// inquire: {
+// color:'#ACD523',
+//     display:"block",
+//  },
   disabledIconButton: {
     color: '#7f7563',
     width: '28px',
@@ -39,13 +43,14 @@ export default function AddToCart(props) {
     }
     return (<span>
       {props.item.quantity >= 0 ?
-        <IconButton color="secondary" dense="dense" onClick={makeInquiry}>
-          {/* <AddCartIcon className={props.cartStyle || classes.iconButton}/> */}
-          <Typography ><i className='fa fa-message'></i> Contact Supplier</Typography>
-        </IconButton> :
-        <IconButton disabled={true} color="secondary" dense="dense">
-          <DisabledCartIcon className={props.cartStyle || classes.disabledIconButton}/>
-        </IconButton>}
+        <IconButton id="inquire"  onClick={makeInquiry}>
+         
+          <Typography id="myinquire"> Contact Supplier</Typography>
+         </IconButton> :
+         <IconButton disabled={true} color="secondary" dense="dense">
+           <DisabledCartIcon className={props.cartStyle || classes.disabledIconButton}/>
+        </IconButton>} 
+      
       </span>)
 }
 

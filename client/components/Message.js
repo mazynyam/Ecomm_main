@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Message({message:{user, text},name}) {
    let isSentByCurrentUser = false;
-   const trimmedName = name.trim().toLowerCase();
+   const trimmedName = name
    if(user === trimmedName ){
        isSentByCurrentUser = true
    }

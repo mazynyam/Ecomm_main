@@ -6,7 +6,7 @@ const router = express.Router()
 
 router.route('/api/users')
   .get(userCtrl.list)
-  .post(userCtrl.create, userCtrl.verifyEmail, userCtrl.sendEmail)
+  .post(userCtrl.create, userCtrl.verifyEmail)
 router.route('/main-admin')
   .get(authCtrl.requireSignin, userCtrl.read, userCtrl.list)
   .post(userCtrl.create)
@@ -18,7 +18,7 @@ router.route('/api/users/:userId')
   .delete(authCtrl.requireSignin, authCtrl.hasAuthorization, userCtrl.remove)
 router.route('/api/stripe_auth/:userId')
   .put(authCtrl.requireSignin, authCtrl.hasAuthorization, userCtrl.stripe_auth, userCtrl.update)
-router.route('/forgot').post(userCtrl.resetPassword )
+// router.route('/forgot').post(userCtrl.resetPassword )
 router.param('userId', userCtrl.userByID)
 
 export default router
