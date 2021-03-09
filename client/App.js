@@ -17,7 +17,7 @@ import './components/ChatLogin.css'
 // import './admin/sidebar/Sidebar.css'
 // import './admin/main/Main.css'
 import '../node_modules/react-vis/dist/style.css'
-import "bootstrap/dist/css/bootstrap.min.css";
+
 
 const App = () => {
   React.useEffect(() => {
