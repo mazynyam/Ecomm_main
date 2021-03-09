@@ -36,6 +36,7 @@ quote: {
 },
 specservice: {
     fontSize:"15px",
+    fontFamily:"Arial Black"
    },
 
    quoteservice: {
