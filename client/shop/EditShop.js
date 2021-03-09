@@ -17,17 +17,10 @@ import {read, update} from './api-shop.js'
 import {Redirect} from 'react-router-dom'
 import Grid from '@material-ui/core/Grid'
 import MyProducts from './../product/MyProducts'
-import { fade} from '@material-ui/core/styles';
 
 import Config from '../auth/flutterwave-helper'
 
 const useStyles = makeStyles(theme => ({
-  busnpic:{
-    backgroundColor:"#acd523",
-    '&:hover': {
-      backgroundColor:('#acd523'),
-  }
-},
   root: {
     flexGrow: 1,
     margin: 30,
@@ -38,8 +31,7 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     margin: theme.spacing(2),
-    color: "#acd523",
-    fontFamily:"Arial Black",
+    color: theme.palette.protectedTitle,
     fontSize: '1.2em'
   },
   subheading: {
@@ -56,21 +48,7 @@ const useStyles = makeStyles(theme => ({
   },
   submit: {
     margin: 'auto',
-      marginBottom: theme.spacing(2),
-      color:"#17293d",
-      borderColor:"#ACD523",
-      borderWidth:"6px"
-
-      },
-  submitupd: {
-    margin: 'auto',
-      marginBottom: theme.spacing(2),
-      backgroundColor:'#17293d',
-      '&:hover': {
-        backgroundColor: fade('#17293d',1.0),
-      },
-      color:"white"
-       
+    marginBottom: theme.spacing(2)
   },
   bigAvatar: {
     width: 60,
@@ -191,7 +169,7 @@ export default function EditShop ({match}) {
     }
     return (<div className={classes.root}>
       <Grid container spacing={8}>
-      <Grid item xs={12} sm={12} md={5} lg={5} xl={5}>
+        <Grid item xs={6} sm={6}>
           <Card className={classes.card}>
             <CardContent>
               <Typography type="headline" component="h2" className={classes.title}>
@@ -201,7 +179,7 @@ export default function EditShop ({match}) {
               <Avatar src={logoUrl} className={classes.bigAvatar}/><br/>
               <input accept="image/*" onChange={handleChange('image')} className={classes.input} id="icon-button-file" type="file" />
               <label htmlFor="icon-button-file">
-                <Button variant="contained" className={classes.busnpic} component="span">
+                <Button variant="contained" color="default" component="span">
                   Change Logo
                   <FileUpload/>
                 </Button>
@@ -257,7 +235,7 @@ export default function EditShop ({match}) {
                     <div>
                         <input accept="image/*" onChange={handleBusinessCert('business_certificate')} className={classes.input} id="icon-button-file-one" type="file" />
                         <label htmlFor="icon-button-file-one">
-                            <Button variant="contained" className={classes.busnpic} component="span">
+                            <Button variant="contained" color="secondary" component="span">
                             Upload Business Certificate
                             <FileUpload/>
                             </Button>
@@ -270,7 +248,7 @@ export default function EditShop ({match}) {
                         <div>
                             <input accept="image/*" onChange={handleIdCardFront('identity_card_front')} className={classes.input} id="icon-button-file-two" type="file" />
                             <label htmlFor="icon-button-file-two">
-                                <Button variant="contained" className={classes.busnpic} component="span">
+                                <Button variant="contained" color="secondary" component="span">
                                 Upload an ID Card Front
                                 <FileUpload/>
                                 </Button>
@@ -278,7 +256,7 @@ export default function EditShop ({match}) {
                          
                          <input accept="image/*" onChange={handleIdCardBack('identity_card_back')} className={classes.input} id="icon-button-file-three" type="file" />
                               <label htmlFor="icon-button-file-three">
-                                  <Button variant="contained" className={classes.busnpic} component="span">
+                                  <Button variant="contained" color="secondary" component="span">
                                   Upload an ID Card Back
                                   <FileUpload/>
                                   </Button>
@@ -291,11 +269,11 @@ export default function EditShop ({match}) {
             </CardContent>
             <CardActions>
               <FlutterWaveButton color='primary' variant='contained' className={classes.submit} {...fwConfig} />
-              <Button  variant="contained" onClick={clickSubmit} className={classes.submitupd}>Update</Button>
+              <Button color="primary" variant="contained" onClick={clickSubmit} className={classes.submit}>Update</Button>
             </CardActions>
           </Card>
           </Grid>
-          <Grid item xs={12} sm={12} md={5} lg={5} xl={5}>
+          <Grid item xs={6} sm={6}>
             <MyProducts shopId={match.params.shopId}/>
           </Grid>
         </Grid>

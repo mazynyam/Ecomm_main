@@ -12,8 +12,8 @@ import auth from './../auth/auth-helper'
 import {Redirect} from 'react-router-dom'
 import {signin} from './api-auth.js'
 import { fade} from '@material-ui/core/styles';
-
-
+import Footer from '../core/Footer'
+import Header from '../core/Menu'
 const useStyles = makeStyles(theme => ({
   card: {
     maxWidth: 600,
@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     marginTop: theme.spacing(2),
-    
+    // color: theme.palette.openTitle
     color:"#ACD523",
     fontFamily:"Arial Black",
     fontSize:"30px",
@@ -94,6 +94,7 @@ export default function Signin(props) {
 
   return (
     <>
+    <Header />
       <Card className={classes.card}>
         <CardContent>
           <Typography variant="h5" className={classes.title}>
@@ -113,7 +114,7 @@ export default function Signin(props) {
         <Link color='primary' to="/forgot">Forgot Password?</Link>
         </CardActions>
       </Card>
-     
+      <Footer/>
   </>
 
     )

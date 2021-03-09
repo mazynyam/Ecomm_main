@@ -34,18 +34,18 @@ const useStyles = makeStyles(theme => ({
     fontFamily:"Arial Black",
     fontSize: '1.2em'
   },
-  // subheading: {
-  //   marginTop: theme.spacing(2),
-  //   color: "#acd523"
-  // },
-  // cover: {
-  //   width: 110,
-  //   height: 100,
-  //   margin: '8px'
-  // },
-  // details: {
-  //   padding: '10px'
-  // },
+  subheading: {
+    marginTop: theme.spacing(2),
+    color: "#acd523"
+  },
+  cover: {
+    width: 110,
+    height: 100,
+    margin: '8px'
+  },
+  details: {
+    padding: '10px'
+  },
   newpr:{
     backgroundColor:'#17293d',
     '&:hover': {
@@ -111,23 +111,23 @@ export default function MyProducts (props){
         <List dense>
         {products.map((product, i) => {
             return <span key={i}>
-              <ListItem  id="plist">
+              <ListItem>
                 <CardMedia
-                id="pcover"
+                  className={classes.cover}
                   image={'/api/product/image/'+product._id+"?" + new Date().getTime()}
-                  title={<span id="myname">{product.name}</span>}
+                  title={product.name}
                 />
-                <div id="pdetails">
-                  <Typography type="headline" component="h2" color="primary" id="ptitle">
+                <div className={classes.details}>
+                  <Typography type="headline" component="h2" color="primary" className={classes.productTitle}>
                     {product.name}
                   </Typography>
-                  <Typography type="subheading" component="h4" id="stitle">
+                  <Typography type="subheading" component="h4" className={classes.subheading}>
                     Quantity: {product.quantity} | Price: ${product.price}
                   </Typography>
                 </div>
                 <ListItemSecondaryAction>
                   <Link to={"/seller/"+product.shop._id+"/"+product._id+"/edit"}>
-                    <IconButton aria-label="Edit" color="primary" id="icbtn">
+                    <IconButton aria-label="Edit" color="primary">
                       <Edit/>
                     </IconButton>
                   </Link>

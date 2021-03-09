@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import PropTypes from 'prop-types'
-
-import { fade, makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles'
 import Card from '@material-ui/core/Card'
 import Divider from '@material-ui/core/Divider'
 import MenuItem from '@material-ui/core/MenuItem'
@@ -39,13 +38,7 @@ const useStyles = makeStyles(theme => ({
     minWidth: '20px',
     height: '30px',
     padding: '0 8px',
-    marginBottom: '20px',
-    color:"#acd523",
-    backgroundColor:"#17293d",
-    '&:hover': {
-      backgroundColor: fade('#17293d', 0.8)
-      },
- 
+    marginBottom: '20px'
   }
 }))
 
@@ -115,12 +108,13 @@ export default function Search(props) {
           className={classes.searchField}
           margin="normal"
         />
-        <Button variant="contained"  className={classes.searchButton} onClick={search}>
-          <SearchIcon />
+        <Button variant="contained" color={'primary'} className={classes.searchButton} onClick={search}>
+          <SearchIcon/>
         </Button>
         <Divider/>
         <Products products={values.results} searched={values.searched}/>
       </Card>
+    
     </div>
     )
 }

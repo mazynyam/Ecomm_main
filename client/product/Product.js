@@ -31,14 +31,23 @@ const useStyles = makeStyles(theme => ({
     padding: '16px',
     margin: '16px 0px',
     display: 'flex',
-   backgroundColor: '#ACD523',
+    // backgroundColor: '#93c5ae3d',
+     backgroundColor: '#ACD523',
     fontSize: '1.3em',
     color: '#17293d',
     fontFamily:'Arial Black',
     fontWeight:'40px',
     height:"60px",
-     },
-  
+    
+
+  },
+  media: {
+    height: 200,
+    display: 'inline-block',
+    width: '50%',
+    marginLeft: '24px',
+    
+  },
   icon: {
     verticalAlign: 'sub',
     color:'#ACD523'
@@ -55,7 +64,10 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: '#17293d',
     color:"#ACD523"
   },
- 
+  action: {
+    margin: '8px 24px',
+    display: 'inline-block'
+  }
 }))
 
 export default function Product ({match}) {
@@ -100,28 +112,27 @@ export default function Product ({match}) {
           ? `/api/product/image/${product._id}?${new Date().getTime()}`
           : '/api/product/defaultphoto'
     return (
-      <div className={classes.root}>
-      <Grid container spacing={6}>
-        <Grid item xs={12} sm={12} md={12} lg={7} xl={7}>
-          <Card className={classes.card}>
-            <CardHeader
-           
-              title={<span id="mypr">{product.name}</span>}
-              subheader={product.quantity > 0? 'In Stock': 'Out of Stock'}
-              action={
-                <span id="myaction">
-                 Contact Supplier  <AddToInquiry cartStyle={classes.addCart} item={product}/>
+        <div className={classes.root}>
+          <Grid container spacing={10}>
+            <Grid item xs={7} sm={7}>
+              <Card className={classes.card}>
+                <CardHeader
+                  title={product.name}
+                  subheader={product.quantity > 0? 'In Stock': 'Out of Stock'}
+                  action={
+                    <span className={classes.action}>
+                    Contact Supplier  <AddToInquiry cartStyle={classes.addCart} item={product}/>
                     </span>
-              }
-            />
-            <div id="myflex">
-              <CardMedia
-              id="mymedia"
-                image={imageUrl}
-                title={product.name}
-              />
-                 <Typography component="p" variant="subtitle1" id="mysubheading">
-                 {product.description}<br/>
+                  }
+                />
+                <div className={classes.flex}>
+                  <CardMedia
+                    className={classes.media}
+                    image={imageUrl}
+                    title={product.name}
+                  />
+                  <Typography component="p" variant="subtitle1" className={classes.subheading}>
+                    {product.description}<br/>
                     <span className={classes.price}>$ {product.price}</span>
                     <Link to={'/shops/'+product.shop._id} className={classes.link}>
                       <span>

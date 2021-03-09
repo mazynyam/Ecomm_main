@@ -21,12 +21,12 @@ export default function Inquiry () {
 
     return (<div className={classes.root}>
       <Grid container spacing={8}>
-        <Grid item xs={12} sm={12} md={5} lg={5} xl={5}>
+        <Grid item xs={6} sm={6}>
           <InquiryItems enquiryCheckout={enquiryCheckout}
                      setEnquiryCheckout={showenquiryCheckout}/>
         </Grid>
         {enquiryCheckout &&
-          <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+          <Grid item xs={6} sm={6}>
               <EnquiryCheckout/>
             
           </Grid>}

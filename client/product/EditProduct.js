@@ -10,16 +10,11 @@ import Avatar from '@material-ui/core/Avatar'
 import auth from './../auth/auth-helper'
 import FileUpload from '@material-ui/icons/AddPhotoAlternate'
 import { makeStyles } from '@material-ui/core/styles'
-
+import {withStyles} from '@material-ui/core/styles'
 import {read, update} from './api-product.js'
 import {Link, Redirect} from 'react-router-dom'
-import { fade} from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
-  fileupd: {
-    backgroundColor:"#acd523"
-  },
-
   card: {
     margin: 'auto',
     textAlign: 'center',
@@ -30,9 +25,8 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     margin: theme.spacing(2),
-    color: "#acd523",
-    fontSize: '1.2em',
-    fontFamily:"Arial Black"
+    color: theme.palette.protectedTitle,
+    fontSize: '1.2em'
   },
   error: {
     verticalAlign: 'middle'
@@ -42,24 +36,10 @@ const useStyles = makeStyles(theme => ({
     marginRight: theme.spacing(1),
     width: 400
   },
-  
-  submitcanc: {
+  submit: {
     margin: 'auto',
-    marginBottom: theme.spacing(2),
- textDecorationColor:"white",
-  '&:hover': {
-       textDecorationColor:"#17293d",
-       },
+    marginBottom: theme.spacing(2)
   },
-  submitup:{
-    margin: 'auto',
-    marginBottom: theme.spacing(2),
-    backgroundColor:'#17293d',
-    '&:hover': {
-      backgroundColor: fade('#17293d',1.0),
-    },
-    color:"white"
-     },
   bigAvatar: {
     width: 60,
     height: 60,
@@ -146,7 +126,7 @@ export default function EditProduct ({match}) {
           <Avatar src={imageUrl} className={classes.bigAvatar}/><br/>
           <input accept="image/*" onChange={handleChange('image')} className={classes.input} id="icon-button-file" type="file" />
           <label htmlFor="icon-button-file">
-            <Button variant="contained" className={classes.fileupd} component="span">
+            <Button variant="contained" color="secondary" component="span">
               Change Image
               <FileUpload/>
             </Button>
@@ -172,8 +152,8 @@ export default function EditProduct ({match}) {
           }
         </CardContent>
         <CardActions>
-          <Button color="primary" variant="contained" onClick={clickSubmit} className={classes.submitup}>Update</Button>
-          <Link to={'/seller/shops/edit/'+match.params.shopId} className={classes.submitcanc}><Button variant="contained">Cancel</Button></Link>
+          <Button color="primary" variant="contained" onClick={clickSubmit} className={classes.submit}>Update</Button>
+          <Link to={'/seller/shops/edit/'+match.params.shopId} className={classes.submit}><Button variant="contained">Cancel</Button></Link>
         </CardActions>
       </Card>
     </div>)

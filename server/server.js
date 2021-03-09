@@ -19,16 +19,16 @@ io.on('connection', (socket)=>{
     if(error) return callback(error)
 
     socket.emit('message', { user:'admin', text:`Hello , welcome to Kiriikou Chat Support`});
-    socket.broadcast.to(user.room).emit('message', { user:'admin', text:`A new user with name ${user.name} has joined`});
+    socket.broadcast.to(user.room).emit('message', { user:'admin', text:`A new user has joined`});
     socket.join(user.room)
     callback()
   });
 
   socket.on('sendMessage', (message, callback)=>{
     const user = getUser(socket.id)
-    io.to(user.room).emit('message', { user: user.name, text: message})
+    io.to(user).emit('message', { user: user.name, text: message})
     callback()
-  })
+  });
 
   socket.on('disconnect', ()=>{
     console.log('User left')

@@ -15,9 +15,7 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import auth from './../auth/auth-helper'
 import {Link, withRouter} from 'react-router-dom'
-// import logo from './../assets/images/kik.png';
 import logo from './../assets/images/kik.png';
-import loggo from './../assets/images/ekiri.jpg';
 import {  list, listCategories } from './../product/api-product'
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -38,11 +36,9 @@ const useStyles = makeStyles((theme) => ({
   textColor:{
     listStyle:'none',
     color:' #acd523',
-    textDecoration:"none",
+    listStyle:'none',
     '&:hover': {
        color: fade('#acd523', 0.8),
-       textDecorationColor:"#acd523",
-    
        },
        marginRight:"0px",
   },
@@ -293,22 +289,13 @@ const Header = withRouter(({history}) =>{
       <div className={classes.grow}>
         <AppBar position="static" className={classes.brp}>
           <Toolbar>
-                        
-          <Typography className={classes.title} variant="h6" noWrap>
-              <Link to='/' className={classes.textColor} id="bestft">
-              <img src={logo} alt='Logo' height='50' className={classes.kiimg} />
-              <img src={loggo} alt='Logo' height='50' id="kimg" />
-              
-              </Link>
-            </Typography>
             
-            
-            {/* <Typography className={classes.title} variant="h6" noWrap>
+            <Typography className={classes.title} variant="h6" noWrap>
               <Link to='/' className={classes.textColor} id="bestft">
               <img src={logo} alt='Logo' height='50' className={classes.kiimg} />
                 Kiriikou.com
               </Link>
-            </Typography> */}
+            </Typography>
             
             <div className={classes.grow} />
             <div className={classes.sectionDesktop}>

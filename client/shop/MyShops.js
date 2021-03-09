@@ -17,7 +17,7 @@ import auth from './../auth/auth-helper'
 import {listByOwner} from './api-shop.js'
 import {Redirect, Link} from 'react-router-dom'
 import DeleteShop from './DeleteShop'
-import { fade} from '@material-ui/core/styles';
+import Header from '../core/Menu'
 
 const useStyles = makeStyles(theme => ({
   root: theme.mixins.gutters({
@@ -28,43 +28,15 @@ const useStyles = makeStyles(theme => ({
   }),
   title: {
     margin: `${theme.spacing(3)}px 0 ${theme.spacing(3)}px ${theme.spacing(1)}px` ,
-    color: "#ACD523",
-    fontSize: '1.2em',
-    fontFamily:"Arial Black"
+    color: theme.palette.protectedTitle,
+    fontSize: '1.2em'
   },
   addButton:{
     float:'right'
   },
   leftIcon: {
     marginRight: "8px"
-  },
-  newSell:{
-    backgroundColor:'#17293d',
-    '&:hover': {
-      backgroundColor: fade('#17293d',1.0),
-    },
-    color:"white"
-     },
-
-       linkSell:{
-        backgroundColor:'#17293d',
-      
-        textDecorationColor:"white",
-      '&:hover': {
-           backgroundColor: fade('#17293d'),
-           textDecorationColor:"white",
-           
-           },
-          },
-           submitview: {
-            
-         textDecorationColor:"white",
-          '&:hover': {
-               textDecorationColor:"#17293d",
-               },
-          },
-
-  
+  }
 }))
 
 export default function MyShops(){
@@ -101,13 +73,15 @@ export default function MyShops(){
       return <Redirect to='/auth/signin'/>
     }
     return (
+      <>
+      <Header />
     <div>
       <Paper className={classes.root} elevation={4}>
         <Typography type="title" className={classes.title}>
           My Shops
           <span className={classes.addButton}>
-            <Link to="/business/register/new" className={classes.linkSell}>
-              <Button className={classes.newSell} variant="contained">
+            <Link to="/business/register/new">
+              <Button color="primary" variant="contained">
                 <Icon className={classes.leftIcon}>add_box</Icon>  New Shop
               </Button>
             </Link>
@@ -123,8 +97,8 @@ export default function MyShops(){
                 <ListItemText primary={shop.business_name} secondary={shop.description}/>
                 { auth.isAuthenticated().user && auth.isAuthenticated().user._id == shop.owner._id &&
                   (<ListItemSecondaryAction>
-                    <Link to={"/seller/orders/" + shop.business_name+ '/'+shop._id} className={classes.submitview}>
-                      <Button aria-label="Orders" className={classes.submitview}>
+                    <Link to={"/seller/orders/" + shop.business_name+ '/'+shop._id}>
+                      <Button aria-label="Orders" color="primary">
                         View Orders
                       </Button>
                     </Link>
@@ -141,5 +115,6 @@ export default function MyShops(){
             </span>})}
         </List>
       </Paper>
-    </div>)
+    </div>
+    </>)
 }

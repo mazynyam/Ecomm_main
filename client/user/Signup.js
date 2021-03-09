@@ -15,9 +15,8 @@ import DialogContentText from '@material-ui/core/DialogContentText'
 import DialogTitle from '@material-ui/core/DialogTitle'
 import {Link} from 'react-router-dom'
 import crypto from 'crypto'
-import { fade} from '@material-ui/core/styles';
-
-
+import Footer from '../core/Footer'
+import Header from '../core/Menu'
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -32,10 +31,7 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     marginTop: theme.spacing(2),
-   
-    color:"#ACD523",
-    fontFamily:"Arial Black",
-    fontSize:"30px",
+    color: theme.palette.openTitle
   },
   textField: {
     marginLeft: theme.spacing(1),
@@ -43,15 +39,9 @@ const useStyles = makeStyles(theme => ({
     width: 300
   },
   submit: {
-  
     margin: 'auto',
-    marginBottom: theme.spacing(2),
-    backgroundColor:"#ACD523",
-    '&:hover': {
-      color: fade('#fff', 0.8),
-      backgroundColor: fade('#acd523', 0.6),
+    marginBottom: theme.spacing(2)
   }
-}
 }))
 
 export default function Signup() {
@@ -98,7 +88,10 @@ export default function Signup() {
       
     })
   }   
-    return (<div>
+    return (
+    <>
+    <Header />
+    <div>
       <Card className={classes.card}>
         <CardContent>
           <Typography variant="h6" className={classes.title}>
@@ -134,5 +127,8 @@ export default function Signup() {
         </DialogActions>
       </Dialog>
     </div>
+    <Footer />
+    </>
+
   )
 }

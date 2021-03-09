@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography'
 import Divider from '@material-ui/core/Divider'
 import {list} from './api-shop.js'
 import {Link} from 'react-router-dom'
-
+import Header from '../core/Menu'
 const useStyles = makeStyles(theme => ({
   root: theme.mixins.gutters({
     maxWidth: 600,
@@ -20,10 +20,9 @@ const useStyles = makeStyles(theme => ({
   }),
   title: {
     margin: `${theme.spacing(3)}px 0 ${theme.spacing(2)}px`,
-    color: "#acd523",
+    color: theme.palette.protectedTitle,
     textAlign: 'center',
-    fontSize: '1.2em',
-    fontFamily:"Arial Black"
+    fontSize: '1.2em'
   },
   avatar:{
     width: 100,
@@ -61,6 +60,8 @@ export default function Shops(){
   }, [])
 
     return (
+      <>
+      <Header />
     <div>
       <Paper className={classes.root} elevation={4}>
         <Typography type="title" className={classes.title}>
@@ -87,5 +88,7 @@ export default function Shops(){
             </Link>})}
         </List>
       </Paper>
-    </div>)
+    </div>
+    </>
+    )
 }
