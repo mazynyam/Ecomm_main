@@ -4,7 +4,7 @@
   Switch
 } from 'react-router-dom'
 import Home from  './core/Home'
-import Menu from  './core/Menu'
+
 import Users from   './user/Users'
 import Admin  from './admin/Admin'
 import Signup from  './user/Signup'
@@ -19,7 +19,7 @@ import MyShops from  './shop/MyShops'
 import Shop  from './shop/Shop'
 import EditShop from  './shop/EditShop'
 import NewProduct from  './product/NewProduct'
-import ListProducts from  './product/Products'
+
 import EditProduct from  './product/EditProduct'
 import Product from  './product/Product'
 import Inquiry from  './cart/Inquiry'
@@ -35,6 +35,7 @@ import SingleUser from './admin/Users/SingleUser'
 import Dashboard from  './admin/Dashboard'
 import ProductList from './admin/products/ProductList'
 import Register  from './views/pages/register/Register'
+import Chat from './components/Chat'
 
  function MainRouter() {
   return (
@@ -49,7 +50,7 @@ import Register  from './views/pages/register/Register'
            <Route path='/user/signup' name='Admin Login' render={props => <Signup {...props} /> } />
            <Route path='/auth/signin' name='Admin Login' render={props => <Signin {...props} /> } />
            <Route path='/user/:userId' name='Profile' render={props => <Profile {...props} /> } />
-           {/* <Route path='admin/user/:userId' name='Profile' render={props => <Profile {...props} /> } /> */}
+           <Route path='admin/user/:userId' name='Profile' render={props => <Profile {...props} /> } />
            <Route path='admin/user/:userId' name='Profile' render={props => <SingleUser {...props} /> } />
            <PrivateRoute path='/user/edit/:userId' name='Edit Profile' render={props => <EditProfile {...props} /> } />
            <Route path='/place-request/get-started' name='Admin Login' render={props => <PlaceARequestForm {...props} /> } />
@@ -65,6 +66,8 @@ import Register  from './views/pages/register/Register'
            <PrivateRoute path="/seller/orders/:shop/:shopId" component={ShopOrders}/>
            <PrivateRoute path="/admin/seller/orders/:shop/:shopId" component={ShopOrders}/>
           <PrivateRoute path="/seller/shops" component={MyShops}/>
+          
+        <Route path="/" component={Chat} />
           <PrivateRoute path="/seller/shop/new" component={NewShop}/>
           <PrivateRoute path="/business/register/new" component={NewShop}/>
           <PrivateRoute path="/seller/shop/edit/:shopId" component={EditShop}/>
