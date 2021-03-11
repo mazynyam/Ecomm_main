@@ -141,13 +141,13 @@ export default function Categories(props){
           <Divider/>
           <Products products={products} searched={false}/>
         </Card>
-        <CPagination
+        {/* <CPagination
             activePage={page}
             onActivePageChange={pageChange}
             pages={5}
             doubleArrows={false} 
             align="center"
-          />
+          /> */}
       </div>
     )
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './../assets/images/kik.png';
 import {Link, withRouter} from 'react-router-dom'
 import { fade, makeStyles } from '@material-ui/core/styles';
-import Chat from './../components/Chat'
+ import Chat from './../components/Chat'
 
 const useStyles = makeStyles((theme) => ({
 hotext:{
