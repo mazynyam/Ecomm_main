@@ -17,12 +17,12 @@ import './components/Message.css'
 // import './admin/sidebar/Sidebar.css'
 // import './admin/main/Main.css'
  import '../node_modules/react-vis/dist/style.css'
-// import './admin/Admin.css'
-// import './admin/navbar/Navbar.css'
-// import './admin/sidebar/Sidebar.css'
-// import './admin/main/Main.css'
-// import './admin/adminlte.css'
-// import './assets/css/jqvmap.css'
+import './admin/Admin.css'
+import './admin/navbar/Navbar.css'
+import './admin/sidebar/Sidebar.css'
+import './admin/main/Main.css'
+import './admin/adminlte.css'
+import './assets/css/jqvmap.css'
 
 const App = () => {
   React.useEffect(() => {
