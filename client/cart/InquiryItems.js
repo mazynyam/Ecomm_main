@@ -74,7 +74,8 @@ const useStyles = makeStyles(theme => ({
     marginRight: '40px',
     fontSize: '1.5em',
     // color: 'rgb(72, 175, 148)'
-    color:' #17293d',
+    color:'black',
+    fontFamily:"Arial "
     
     
   

@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './../assets/images/kik.png';
 import {Link, withRouter} from 'react-router-dom'
 import { fade, makeStyles } from '@material-ui/core/styles';
- import Chat from './../components/Chat'
+//  import Chat from './../components/Chat'
 
 const useStyles = makeStyles((theme) => ({
 hotext:{
@@ -17,8 +17,8 @@ hotext:{
 function Footer() {
     const classes = useStyles();
     return(
-        <>
-        <Chat />
+        // <>
+        // <Chat />
         <div className="footer bg-dark py-5">
         <div className="footer-container grids grid-3">
             <div>
@@ -47,19 +47,19 @@ function Footer() {
                 <a href="http://twitter.com/KiriikouC?s=08" target='_blank'><i className="fa fa-twitter fa-2x"></i></a>
                 <a href="http://t.me/kiriikou_dotcom" target='_blank'><i className="fa fa-telegram fa-2x"></i></a>
             </div>
-            <div className="button">
+            {/* <div className="button">
                 <div className="myForm" >
                     <button className="floating-btn" id='myForm' onClick={()=>document.getElementById("myForm").style.display = "block"} >
                         <i className="fas fa-comments 4x"></i>
                     </button>
                 </div>
-            </div>
+            </div> */}
         </div>
     </div>
 
 
    
- </>
+//  </>
             )
     }
 
