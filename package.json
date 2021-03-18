@@ -5,9 +5,9 @@
   "proxy": "flutterwave.com",
   "dependencies": {
     "-": "0.0.1",
-    "@babel/core": "^7.12.10",
+    "@babel/core": "^7.13.1",
     "@babel/plugin-proposal-class-properties": "^7.13.0",
-    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-env": "^7.13.5",
     "@babel/preset-react": "^7.12.10",
     "@coreui/chartjs": "^2.0.0",
     "@coreui/coreui": "^3.4.0",
