@@ -1,6 +1,6 @@
 import React, { useEffect, useState} from 'react'
-import { CCard, CCardBody, CCardHeader, CCol, CRow } from '@coreui/react'
-import CIcon from '@coreui/icons-react'
+// import { CCard, CCardBody, CCardHeader, CCol, CRow } from '@coreui/react'
+// import CIcon from '@coreui/icons-react'
 import auth from '../../auth/auth-helper'
 
 import{ read }from '../../user/api-user'

@@ -1,23 +1,23 @@
 import React, { useState } from 'react'
 import { Link, Redirect } from 'react-router-dom'
-import CIcon from '@coreui/icons-react'
+// import CIcon from '@coreui/icons-react'
 import {signin} from '../auth/api-auth'
 import auth from '../auth/auth-helper'
 import { Container, Row, Card, Form, Col, Button} from 'react-bootstrap'
-import {
-  CButton,
-  CCard,
-  CCardBody,
-  CCardGroup,
-  CCol,
-  CContainer,
-  CForm,
-  CInput,
-  CInputGroup,
-  CInputGroupPrepend,
-  CInputGroupText,
-  CRow
-} from '@coreui/react'
+// import {
+//   CButton,
+//   CCard,
+//   CCardBody,
+//   CCardGroup,
+//   CCol,
+//   CContainer,
+//   CForm,
+//   CInput,
+//   CInputGroup,
+//   CInputGroupPrepend,
+//   CInputGroupText,
+//   CRow
+// } from '@coreui/react'
 
 export default function Login(props) {
 

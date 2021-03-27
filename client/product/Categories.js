@@ -11,9 +11,9 @@ import Icon from '@material-ui/core/Icon'
 import {list} from './api-product.js'
 import Products from './Products'
 import { useHistory, useLocation} from 'react-router-dom';
-import {
-  CPagination
-} from '@coreui/react'
+// import {
+//   CPagination
+// } from '@coreui/react'
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',

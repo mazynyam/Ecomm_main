@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import { useHistory, useLocation } from 'react-router-dom'
-import {
-  CBadge,
-  CCard,
-  CCardBody,
-  CCardHeader,
-  CCol,
-  CDataTable,
-  CRow,
-  CPagination
-} from '@coreui/react'
+// import {
+//   CBadge,
+//   CCard,
+//   CCardBody,
+//   CCardHeader,
+//   CCol,
+//   CDataTable,
+//   CRow,
+//   CPagination
+// } from '@coreui/react'
 
 import {list} from '../../shop/api-shop'
 
