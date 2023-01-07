@@ -59,7 +59,7 @@
     "react-router-dom": "^5.2.0",
     "react-scroll-to-bottom": "^4.1.0",
     "react-stripe-elements": "^6.1.2",
-    "react-vis": "^1.11.7",
+    "react-vis": "^1.11.8",
     "reactstrap": "^8.9.0",
     "redux": "^4.0.5",
     "request": "^2.88.2",
